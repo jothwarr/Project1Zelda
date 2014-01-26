@@ -52,8 +52,8 @@ TextureImporter:
         y: 287
         width: 15
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_1
       rect:
         serializedVersion: 2
@@ -61,8 +61,8 @@ TextureImporter:
         y: 287
         width: 15
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_2
       rect:
         serializedVersion: 2
@@ -70,8 +70,8 @@ TextureImporter:
         y: 287
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_3
       rect:
         serializedVersion: 2
@@ -79,8 +79,8 @@ TextureImporter:
         y: 288
         width: 14
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_4
       rect:
         serializedVersion: 2
@@ -88,8 +88,8 @@ TextureImporter:
         y: 287
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_5
       rect:
         serializedVersion: 2
@@ -97,8 +97,8 @@ TextureImporter:
         y: 287
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_6
       rect:
         serializedVersion: 2
@@ -106,8 +106,8 @@ TextureImporter:
         y: 287
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_7
       rect:
         serializedVersion: 2
@@ -115,8 +115,8 @@ TextureImporter:
         y: 288
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_8
       rect:
         serializedVersion: 2
@@ -124,8 +124,8 @@ TextureImporter:
         y: 287
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_9
       rect:
         serializedVersion: 2
@@ -133,8 +133,8 @@ TextureImporter:
         y: 287
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_10
       rect:
         serializedVersion: 2
@@ -142,8 +142,8 @@ TextureImporter:
         y: 287
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_11
       rect:
         serializedVersion: 2
@@ -151,8 +151,8 @@ TextureImporter:
         y: 288
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_12
       rect:
         serializedVersion: 2
@@ -160,8 +160,8 @@ TextureImporter:
         y: 257
         width: 13
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_13
       rect:
         serializedVersion: 2
@@ -169,8 +169,8 @@ TextureImporter:
         y: 258
         width: 14
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_14
       rect:
         serializedVersion: 2
@@ -178,8 +178,8 @@ TextureImporter:
         y: 257
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_15
       rect:
         serializedVersion: 2
@@ -187,8 +187,8 @@ TextureImporter:
         y: 257
         width: 15
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_16
       rect:
         serializedVersion: 2
@@ -196,8 +196,8 @@ TextureImporter:
         y: 257
         width: 15
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_17
       rect:
         serializedVersion: 2
@@ -205,8 +205,8 @@ TextureImporter:
         y: 258
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_18
       rect:
         serializedVersion: 2
@@ -214,8 +214,8 @@ TextureImporter:
         y: 257
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_19
       rect:
         serializedVersion: 2
@@ -223,8 +223,8 @@ TextureImporter:
         y: 257
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_20
       rect:
         serializedVersion: 2
@@ -232,8 +232,8 @@ TextureImporter:
         y: 257
         width: 15
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_21
       rect:
         serializedVersion: 2
@@ -241,8 +241,8 @@ TextureImporter:
         y: 258
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_22
       rect:
         serializedVersion: 2
@@ -250,8 +250,8 @@ TextureImporter:
         y: 257
         width: 12
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_23
       rect:
         serializedVersion: 2
@@ -259,8 +259,8 @@ TextureImporter:
         y: 257
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_24
       rect:
         serializedVersion: 2
@@ -268,8 +268,8 @@ TextureImporter:
         y: 228
         width: 16
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_25
       rect:
         serializedVersion: 2
@@ -277,8 +277,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_26
       rect:
         serializedVersion: 2
@@ -286,8 +286,8 @@ TextureImporter:
         y: 227
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_27
       rect:
         serializedVersion: 2
@@ -295,8 +295,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_28
       rect:
         serializedVersion: 2
@@ -304,8 +304,8 @@ TextureImporter:
         y: 228
         width: 16
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_29
       rect:
         serializedVersion: 2
@@ -313,8 +313,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_30
       rect:
         serializedVersion: 2
@@ -322,8 +322,8 @@ TextureImporter:
         y: 227
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_31
       rect:
         serializedVersion: 2
@@ -331,8 +331,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_32
       rect:
         serializedVersion: 2
@@ -340,8 +340,8 @@ TextureImporter:
         y: 228
         width: 16
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_33
       rect:
         serializedVersion: 2
@@ -349,8 +349,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_34
       rect:
         serializedVersion: 2
@@ -358,8 +358,8 @@ TextureImporter:
         y: 227
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_35
       rect:
         serializedVersion: 2
@@ -367,8 +367,8 @@ TextureImporter:
         y: 228
         width: 15
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_36
       rect:
         serializedVersion: 2
@@ -376,8 +376,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_37
       rect:
         serializedVersion: 2
@@ -385,8 +385,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 2
+      pivot: {x: .5, y: 1}
     - name: NES - Legend of Zelda The - Link_38
       rect:
         serializedVersion: 2
@@ -394,8 +394,8 @@ TextureImporter:
         y: 191
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: .5}
     - name: NES - Legend of Zelda The - Link_39
       rect:
         serializedVersion: 2
@@ -403,8 +403,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_40
       rect:
         serializedVersion: 2
@@ -412,8 +412,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_41
       rect:
         serializedVersion: 2
@@ -421,8 +421,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_42
       rect:
         serializedVersion: 2
@@ -430,8 +430,8 @@ TextureImporter:
         y: 191
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_43
       rect:
         serializedVersion: 2
@@ -439,8 +439,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_44
       rect:
         serializedVersion: 2
@@ -448,8 +448,8 @@ TextureImporter:
         y: 192
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_45
       rect:
         serializedVersion: 2
@@ -457,8 +457,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_46
       rect:
         serializedVersion: 2
@@ -466,8 +466,8 @@ TextureImporter:
         y: 191
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_47
       rect:
         serializedVersion: 2
@@ -475,8 +475,8 @@ TextureImporter:
         y: 198
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_48
       rect:
         serializedVersion: 2
@@ -484,8 +484,8 @@ TextureImporter:
         y: 162
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_49
       rect:
         serializedVersion: 2
@@ -493,8 +493,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_50
       rect:
         serializedVersion: 2
@@ -502,8 +502,8 @@ TextureImporter:
         y: 161
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_51
       rect:
         serializedVersion: 2
@@ -511,8 +511,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_52
       rect:
         serializedVersion: 2
@@ -520,8 +520,8 @@ TextureImporter:
         y: 162
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_53
       rect:
         serializedVersion: 2
@@ -529,8 +529,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_54
       rect:
         serializedVersion: 2
@@ -538,8 +538,8 @@ TextureImporter:
         y: 161
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_55
       rect:
         serializedVersion: 2
@@ -547,8 +547,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_56
       rect:
         serializedVersion: 2
@@ -556,8 +556,8 @@ TextureImporter:
         y: 162
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_57
       rect:
         serializedVersion: 2
@@ -565,8 +565,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_58
       rect:
         serializedVersion: 2
@@ -574,8 +574,8 @@ TextureImporter:
         y: 161
         width: 16
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_59
       rect:
         serializedVersion: 2
@@ -583,8 +583,8 @@ TextureImporter:
         y: 168
         width: 27
         height: 15
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_60
       rect:
         serializedVersion: 2
@@ -592,8 +592,8 @@ TextureImporter:
         y: 137
         width: 13
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_61
       rect:
         serializedVersion: 2
@@ -601,8 +601,8 @@ TextureImporter:
         y: 137
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_62
       rect:
         serializedVersion: 2
@@ -610,8 +610,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_63
       rect:
         serializedVersion: 2
@@ -619,8 +619,8 @@ TextureImporter:
         y: 146
         width: 16
         height: 6
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_64
       rect:
         serializedVersion: 2
@@ -628,8 +628,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_65
       rect:
         serializedVersion: 2
@@ -637,8 +637,8 @@ TextureImporter:
         y: 137
         width: 13
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_66
       rect:
         serializedVersion: 2
@@ -646,8 +646,8 @@ TextureImporter:
         y: 137
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_67
       rect:
         serializedVersion: 2
@@ -655,8 +655,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_68
       rect:
         serializedVersion: 2
@@ -664,8 +664,8 @@ TextureImporter:
         y: 146
         width: 16
         height: 6
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_69
       rect:
         serializedVersion: 2
@@ -673,8 +673,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_70
       rect:
         serializedVersion: 2
@@ -682,8 +682,8 @@ TextureImporter:
         y: 137
         width: 13
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_71
       rect:
         serializedVersion: 2
@@ -691,8 +691,8 @@ TextureImporter:
         y: 137
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_72
       rect:
         serializedVersion: 2
@@ -700,8 +700,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_73
       rect:
         serializedVersion: 2
@@ -709,8 +709,8 @@ TextureImporter:
         y: 146
         width: 16
         height: 6
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_74
       rect:
         serializedVersion: 2
@@ -718,8 +718,8 @@ TextureImporter:
         y: 130
         width: 4
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_75
       rect:
         serializedVersion: 2
@@ -727,8 +727,8 @@ TextureImporter:
         y: 122
         width: 16
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_76
       rect:
         serializedVersion: 2
@@ -736,8 +736,8 @@ TextureImporter:
         y: 122
         width: 11
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_77
       rect:
         serializedVersion: 2
@@ -745,8 +745,8 @@ TextureImporter:
         y: 122
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_78
       rect:
         serializedVersion: 2
@@ -754,8 +754,8 @@ TextureImporter:
         y: 130
         width: 10
         height: 4
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_79
       rect:
         serializedVersion: 2
@@ -763,8 +763,8 @@ TextureImporter:
         y: 130
         width: 10
         height: 4
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_80
       rect:
         serializedVersion: 2
@@ -772,8 +772,8 @@ TextureImporter:
         y: 130
         width: 10
         height: 4
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_81
       rect:
         serializedVersion: 2
@@ -781,8 +781,8 @@ TextureImporter:
         y: 92
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_82
       rect:
         serializedVersion: 2
@@ -790,8 +790,8 @@ TextureImporter:
         y: 97
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_83
       rect:
         serializedVersion: 2
@@ -799,8 +799,8 @@ TextureImporter:
         y: 92
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_84
       rect:
         serializedVersion: 2
@@ -808,8 +808,8 @@ TextureImporter:
         y: 97
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_85
       rect:
         serializedVersion: 2
@@ -817,8 +817,8 @@ TextureImporter:
         y: 92
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_86
       rect:
         serializedVersion: 2
@@ -826,8 +826,8 @@ TextureImporter:
         y: 92
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_87
       rect:
         serializedVersion: 2
@@ -835,8 +835,8 @@ TextureImporter:
         y: 96
         width: 7
         height: 8
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_88
       rect:
         serializedVersion: 2
@@ -844,8 +844,8 @@ TextureImporter:
         y: 96
         width: 7
         height: 8
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_89
       rect:
         serializedVersion: 2
@@ -853,8 +853,8 @@ TextureImporter:
         y: 94
         width: 13
         height: 13
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_90
       rect:
         serializedVersion: 2
@@ -862,8 +862,8 @@ TextureImporter:
         y: 94
         width: 8
         height: 12
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_91
       rect:
         serializedVersion: 2
@@ -871,8 +871,8 @@ TextureImporter:
         y: 92
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_92
       rect:
         serializedVersion: 2
@@ -880,8 +880,8 @@ TextureImporter:
         y: 103
         width: 6
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_93
       rect:
         serializedVersion: 2
@@ -889,8 +889,8 @@ TextureImporter:
         y: 103
         width: 6
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_94
       rect:
         serializedVersion: 2
@@ -898,8 +898,8 @@ TextureImporter:
         y: 98
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_95
       rect:
         serializedVersion: 2
@@ -907,8 +907,8 @@ TextureImporter:
         y: 98
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_96
       rect:
         serializedVersion: 2
@@ -916,8 +916,8 @@ TextureImporter:
         y: 92
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_97
       rect:
         serializedVersion: 2
@@ -925,8 +925,8 @@ TextureImporter:
         y: 92
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_98
       rect:
         serializedVersion: 2
@@ -934,8 +934,8 @@ TextureImporter:
         y: 62
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_99
       rect:
         serializedVersion: 2
@@ -943,8 +943,8 @@ TextureImporter:
         y: 67
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_100
       rect:
         serializedVersion: 2
@@ -952,8 +952,8 @@ TextureImporter:
         y: 62
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_101
       rect:
         serializedVersion: 2
@@ -961,8 +961,8 @@ TextureImporter:
         y: 67
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_102
       rect:
         serializedVersion: 2
@@ -970,8 +970,8 @@ TextureImporter:
         y: 62
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_103
       rect:
         serializedVersion: 2
@@ -979,8 +979,8 @@ TextureImporter:
         y: 68
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_104
       rect:
         serializedVersion: 2
@@ -988,8 +988,8 @@ TextureImporter:
         y: 62
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_105
       rect:
         serializedVersion: 2
@@ -997,8 +997,8 @@ TextureImporter:
         y: 68
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_106
       rect:
         serializedVersion: 2
@@ -1006,8 +1006,8 @@ TextureImporter:
         y: 62
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_107
       rect:
         serializedVersion: 2
@@ -1015,8 +1015,8 @@ TextureImporter:
         y: 62
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_108
       rect:
         serializedVersion: 2
@@ -1024,8 +1024,8 @@ TextureImporter:
         y: 66
         width: 7
         height: 9
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_109
       rect:
         serializedVersion: 2
@@ -1033,8 +1033,8 @@ TextureImporter:
         y: 66
         width: 7
         height: 9
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_110
       rect:
         serializedVersion: 2
@@ -1042,8 +1042,8 @@ TextureImporter:
         y: 63
         width: 8
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_111
       rect:
         serializedVersion: 2
@@ -1051,8 +1051,8 @@ TextureImporter:
         y: 65
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_112
       rect:
         serializedVersion: 2
@@ -1060,8 +1060,8 @@ TextureImporter:
         y: 62
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_113
       rect:
         serializedVersion: 2
@@ -1069,8 +1069,8 @@ TextureImporter:
         y: 32
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_114
       rect:
         serializedVersion: 2
@@ -1078,8 +1078,8 @@ TextureImporter:
         y: 37
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_115
       rect:
         serializedVersion: 2
@@ -1087,8 +1087,8 @@ TextureImporter:
         y: 32
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_116
       rect:
         serializedVersion: 2
@@ -1096,8 +1096,8 @@ TextureImporter:
         y: 37
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_117
       rect:
         serializedVersion: 2
@@ -1105,8 +1105,8 @@ TextureImporter:
         y: 32
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_118
       rect:
         serializedVersion: 2
@@ -1114,8 +1114,8 @@ TextureImporter:
         y: 38
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_119
       rect:
         serializedVersion: 2
@@ -1123,8 +1123,8 @@ TextureImporter:
         y: 32
         width: 5
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_120
       rect:
         serializedVersion: 2
@@ -1132,8 +1132,8 @@ TextureImporter:
         y: 38
         width: 16
         height: 5
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_121
       rect:
         serializedVersion: 2
@@ -1141,8 +1141,8 @@ TextureImporter:
         y: 32
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_122
       rect:
         serializedVersion: 2
@@ -1150,8 +1150,8 @@ TextureImporter:
         y: 32
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_123
       rect:
         serializedVersion: 2
@@ -1159,8 +1159,8 @@ TextureImporter:
         y: 32
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_124
       rect:
         serializedVersion: 2
@@ -1168,8 +1168,8 @@ TextureImporter:
         y: 33
         width: 8
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_125
       rect:
         serializedVersion: 2
@@ -1177,8 +1177,8 @@ TextureImporter:
         y: 32
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_126
       rect:
         serializedVersion: 2
@@ -1186,8 +1186,8 @@ TextureImporter:
         y: 34
         width: 11
         height: 12
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_127
       rect:
         serializedVersion: 2
@@ -1195,8 +1195,8 @@ TextureImporter:
         y: 32
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_128
       rect:
         serializedVersion: 2
@@ -1204,8 +1204,8 @@ TextureImporter:
         y: 2
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_129
       rect:
         serializedVersion: 2
@@ -1213,8 +1213,8 @@ TextureImporter:
         y: 7
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_130
       rect:
         serializedVersion: 2
@@ -1222,8 +1222,8 @@ TextureImporter:
         y: 2
         width: 7
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_131
       rect:
         serializedVersion: 2
@@ -1231,8 +1231,8 @@ TextureImporter:
         y: 7
         width: 16
         height: 7
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_132
       rect:
         serializedVersion: 2
@@ -1240,8 +1240,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_133
       rect:
         serializedVersion: 2
@@ -1249,8 +1249,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_134
       rect:
         serializedVersion: 2
@@ -1258,8 +1258,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_135
       rect:
         serializedVersion: 2
@@ -1267,8 +1267,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_136
       rect:
         serializedVersion: 2
@@ -1276,8 +1276,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_137
       rect:
         serializedVersion: 2
@@ -1285,8 +1285,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_138
       rect:
         serializedVersion: 2
@@ -1294,8 +1294,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_139
       rect:
         serializedVersion: 2
@@ -1303,8 +1303,8 @@ TextureImporter:
         y: 11
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_140
       rect:
         serializedVersion: 2
@@ -1312,8 +1312,8 @@ TextureImporter:
         y: 2
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_141
       rect:
         serializedVersion: 2
@@ -1321,8 +1321,8 @@ TextureImporter:
         y: 2
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_142
       rect:
         serializedVersion: 2
@@ -1330,8 +1330,8 @@ TextureImporter:
         y: 2
         width: 14
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_143
       rect:
         serializedVersion: 2
@@ -1339,8 +1339,8 @@ TextureImporter:
         y: 5
         width: 10
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_144
       rect:
         serializedVersion: 2
@@ -1348,8 +1348,8 @@ TextureImporter:
         y: 5
         width: 10
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_145
       rect:
         serializedVersion: 2
@@ -1357,8 +1357,8 @@ TextureImporter:
         y: 2
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_146
       rect:
         serializedVersion: 2
@@ -1366,8 +1366,8 @@ TextureImporter:
         y: 2
         width: 8
         height: 16
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_147
       rect:
         serializedVersion: 2
@@ -1375,8 +1375,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_148
       rect:
         serializedVersion: 2
@@ -1384,8 +1384,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_149
       rect:
         serializedVersion: 2
@@ -1393,8 +1393,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_150
       rect:
         serializedVersion: 2
@@ -1402,8 +1402,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_151
       rect:
         serializedVersion: 2
@@ -1411,8 +1411,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_152
       rect:
         serializedVersion: 2
@@ -1420,8 +1420,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_153
       rect:
         serializedVersion: 2
@@ -1429,8 +1429,8 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Link_154
       rect:
         serializedVersion: 2
@@ -1438,7 +1438,7 @@ TextureImporter:
         y: 0
         width: 8
         height: 10
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
   spritePackingTag: 
   userData: 
