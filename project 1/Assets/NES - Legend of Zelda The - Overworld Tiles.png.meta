@@ -1,0 +1,1507 @@
+fileFormatVersion: 2
+guid: 408bdc0da9755d44da821c0fbaa2449b
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: NES - Legend of Zelda The - Overworld Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 146
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 146
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_33
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 129
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 112
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_57
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_58
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_60
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_61
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_62
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_63
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_64
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_65
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_66
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_67
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_68
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_69
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_70
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_71
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 95
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_73
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_74
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_75
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_76
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_77
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_78
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_79
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_80
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_81
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_82
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_83
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_84
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_85
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_86
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_87
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_88
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_89
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 78
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_91
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_92
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_93
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_94
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_95
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_96
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_97
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_98
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_99
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_100
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_101
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_102
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_103
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_104
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_105
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_106
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_107
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 61
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_109
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_110
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_111
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_112
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_113
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_114
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_115
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_116
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_117
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_118
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_119
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_120
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_121
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_122
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_123
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_124
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_125
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 44
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_127
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_128
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_129
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_130
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_131
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_132
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_133
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_134
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_135
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_136
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_137
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_138
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_139
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_140
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_141
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_142
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_143
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 27
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_145
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_146
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_147
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_148
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_149
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_150
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_151
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_152
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_153
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_154
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_155
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_156
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_157
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_158
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_159
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_160
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+    - name: NES - Legend of Zelda The - Overworld Tiles_161
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 10
+        width: 17
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
