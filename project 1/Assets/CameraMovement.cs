@@ -5,8 +5,8 @@ public class CameraMovement : MonoBehaviour {
 	Transform link;
 	Rect room;
 	Vector3 translation = new Vector3(0f, 0f, 0f);
-	static float roomWidth = 24f;
-	static float roomHeight = 12.8f;
+	static float roomWidth = 25.6f;
+	static float roomHeight = 17.6f;
 	static float speed = roomWidth;
 
 	// Use this for initialization

@@ -1,5 +1,6 @@
 project 1/Temp
 project 1/Library
+project 1/project 1.userprefs
 *.csproj
-*.unityproj
+*.unity
 *.sln
