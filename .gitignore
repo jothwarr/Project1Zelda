@@ -1,5 +1,5 @@
-/Temp
-/Library
+project 1/Temp
+project 1/Library
 *.csproj
 *.unityproj
 *.sln
