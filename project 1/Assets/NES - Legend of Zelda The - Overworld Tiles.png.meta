@@ -246,10 +246,10 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Tiles_22
       rect:
         serializedVersion: 2
-        x: 68
+        x: 69
         y: 129
-        width: 17
-        height: 17
+        width: 16
+        height: 16
       alignment: 6
       pivot: {x: 0, y: 0}
     - name: NES - Legend of Zelda The - Overworld Tiles_23
@@ -597,10 +597,10 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Tiles_61
       rect:
         serializedVersion: 2
-        x: 119
+        x: 120
         y: 95
-        width: 17
-        height: 17
+        width: 16
+        height: 16
       alignment: 6
       pivot: {x: 0, y: 0}
     - name: NES - Legend of Zelda The - Overworld Tiles_62
