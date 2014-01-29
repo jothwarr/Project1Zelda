@@ -10,12 +10,31 @@
 using System;
 namespace AssemblyCSharp
 {
-		public interface PauseMovement
+		public static class PauseMovement
 		{
-		void freezeTime();
-		void unfreezeTime();
-		void stopEverything();
-		void startEverything();
+		static bool isStopped;
+		static bool isFrozen;
+
+		static PauseMovement() {
+			isStopped = false;
+			isFrozen = false;
+		}
+
+		static void freezeTime() {
+						isFrozen = true;
+				}
+
+		static void unfreezeTime() {
+						isFrozen = false;
+				}
+
+		static void stopEverything() {
+						isStopped = true;
+				}
+
+		static void startEverything() {
+						isStopped = false;
+				}
 		}
 }
 
