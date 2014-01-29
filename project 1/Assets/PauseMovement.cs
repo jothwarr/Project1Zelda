@@ -35,6 +35,15 @@ namespace AssemblyCSharp
 		static void startEverything() {
 						isStopped = false;
 				}
+
+		static bool isTimeFrozen() {
+						return isFrozen;
+				}
+
+		static bool isTimeStopped() {
+						return isStopped;
+				}
+
 		}
 }
 
