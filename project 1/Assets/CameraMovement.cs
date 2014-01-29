@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using AssemblyCSharp;
 
 public class CameraMovement : MonoBehaviour {
 	Transform link;
@@ -38,7 +39,11 @@ public class CameraMovement : MonoBehaviour {
 		Vector3 move = translation.normalized * Time.deltaTime * speed;
 		if (translation.magnitude < move.magnitude)
 						move = translation;
-		Camera.main.transform.Translate (move);
-		translation -= move;
+		if (move.magnitude != 0) {
+						PauseMovement.stopEverything ();
+						Camera.main.transform.Translate (move);
+						PauseMovement.stopEverything ();
+						translation -= move;
+		}
 	}
 }

@@ -20,27 +20,27 @@ namespace AssemblyCSharp
 			isFrozen = false;
 		}
 
-		static void freezeTime() {
+		public static void freezeTime() {
 						isFrozen = true;
 				}
 
-		static void unfreezeTime() {
+		public static void unfreezeTime() {
 						isFrozen = false;
 				}
 
-		static void stopEverything() {
+		public static void stopEverything() {
 						isStopped = true;
 				}
 
-		static void startEverything() {
+		public static void startEverything() {
 						isStopped = false;
 				}
 
-		static bool isTimeFrozen() {
+		public static bool isTimeFrozen() {
 						return isFrozen;
 				}
 
-		static bool isTimeStopped() {
+		public static bool isTimeStopped() {
 						return isStopped;
 				}
 
