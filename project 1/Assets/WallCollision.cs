@@ -7,7 +7,7 @@ public class WallCollision : MonoBehaviour {
 	{
 		if(col.gameObject.name == "Link")
 		{
-			col.rigidbody.position = Vector3.zero;
+
 		}
 	}
 }

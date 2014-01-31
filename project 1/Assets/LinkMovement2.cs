@@ -4,29 +4,30 @@ using System.Collections;
 public class LinkMovement2 : MonoBehaviour
 	
 {
-	bool canmove = true; //indicate if a keyboard key can move a piece
-	Vector3 targetPosition; //temporary value for moving (used in coroutines)
+	public bool canmove = true; //indicate if a keyboard key can move a piece
+	public Vector3 targetPosition; //temporary value for moving (used in coroutines)
+	Vector3 swordPosition;
+	Vector3 swordSize;
+	BoxCollider swordBox;
 	public int speed = 4;
 	public float gridSize=1.6f;
 	private Animator animator;
-	private bool attacking = false;
-	private float attackTimer = 0f;
-	
+	public bool attacking = false;
+	public float attackTimer = 0f;
+
 	void Start()
 	{
-		animator = this.GetComponent<Animator>();
+		animator = this.gameObject.GetComponent<Animator>();
+		swordBox = this.gameObject.GetComponent<BoxCollider>();
 	}
-
-	void OnTriggerEnter (Collider col)
+	/*void OnTriggerEnter (Collider col)
 	{
-		//if(col.gameObject.name == "TreeTile")
-		//{
-		canmove = false;
-		StartCoroutine(MoveInGrid (transform.position.x, transform.position.y - gridSize - 1, transform.position.z)); 
-
-
-		//}
+		canmove = true;
 	}
+	void OnTriggerExit (Collider col)
+	{
+		canmove = true;
+	}*/
 
 	void Update()
 	{
@@ -38,17 +39,28 @@ public class LinkMovement2 : MonoBehaviour
 				attackTimer = .35f;
 		}
 		attackTimer -= Time.deltaTime;
-		if (attackTimer >= 0) 
-				attacking = true;
-		else
-				attacking = false;
-
+		if (attackTimer > 0f) {
+			attacking = true;
+			swordBox.isTrigger = true;
+		}
+		else {
+			attackTimer = 0f;
+			attacking = false;
+			swordBox.isTrigger = false;
+			//canmove = true;
+		}
 		//----------------MOVEMENT
 
 		if ((Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true) 
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 2);
+			swordPosition.x = .06f;
+			swordPosition.y = .04f;
+			swordSize.x = .06f;
+			swordSize.y = .2f;
+			swordBox.center = swordPosition;
+			swordBox.size = swordSize;
 			canmove = false;
 			StartCoroutine (MoveInGrid((float)transform.position.x, (float)transform.position.y+gridSize, (float)transform.position.z));
 		}
@@ -56,6 +68,12 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 3);
+			swordPosition.x = .16f;
+			swordPosition.y = -.08f;
+			swordSize.x = .2f;
+			swordSize.y = .06f;
+			swordBox.center = swordPosition;
+			swordBox.size = swordSize;
 			canmove = false;
 			StartCoroutine(MoveInGrid((float)transform.position.x+gridSize, (float)transform.position.y, (float)transform.position.z));
 		}
@@ -63,6 +81,12 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 1);
+			swordPosition.x = -.04f;
+			swordPosition.y = -.08f;
+			swordSize.x = .2f;
+			swordSize.y = .06f;
+			swordBox.center = swordPosition;
+			swordBox.size = swordSize;
 			canmove = false;
 			StartCoroutine(MoveInGrid((float)transform.position.x-gridSize, (float)transform.position.y, (float)transform.position.z));
 		}
@@ -70,6 +94,12 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 0);
+			swordPosition.x = .075f;
+			swordPosition.y = -.16f;
+			swordSize.x = .06f;
+			swordSize.y = .2f;
+			swordBox.center = swordPosition;
+			swordBox.size = swordSize;
 			canmove = false;
 			StartCoroutine(MoveInGrid((float)transform.position.x, (float)transform.position.y-gridSize, (float)transform.position.z));
 		}
@@ -79,6 +109,9 @@ public class LinkMovement2 : MonoBehaviour
 	//based off of http://answers.unity3d.com/questions/9885/basic-movement-in-a-grid.html
 	IEnumerator MoveInGrid(float x,float y,float z)
 	{
+		x = Mathf.Round (x * 100f) / 100f;
+		y = Mathf.Round (y * 100f) / 100f;
+		z = Mathf.Round (z * 100f) / 100f;
 		while (transform.position.x != x || transform.position.y != y || transform.position.z != z)
 		{
 			//moving x forward
@@ -159,6 +192,7 @@ public class LinkMovement2 : MonoBehaviour
 			{
 				targetPosition.z = 0;
 			}
+
 			transform.Translate(targetPosition);
 			yield return 0;
 		}
