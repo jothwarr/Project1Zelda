@@ -22,7 +22,6 @@ public class EnemyMovement : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
 	{
 		col.gameObject.transform.Translate (Vector3.zero);
-		col.gameObject
 		this.renderer.enabled = false;
 		this.gameObject.collider.enabled = false;
 		Destroy (this);
