@@ -741,10 +741,10 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Enemies_77
       rect:
         serializedVersion: 2
-        x: 864
-        y: 32
-        width: 32
-        height: 32
+        x: 867
+        y: 52
+        width: 19
+        height: 9
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_78
@@ -876,10 +876,10 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Enemies_92
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 32
-        width: 32
-        height: 32
+        x: 1355
+        y: 51
+        width: 10
+        height: 10
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_93
