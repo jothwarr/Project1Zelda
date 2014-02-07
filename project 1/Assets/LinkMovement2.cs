@@ -5,15 +5,19 @@ public class LinkMovement2 : MonoBehaviour
 	
 {
 	public bool canmove = true; //indicate if a keyboard key can move a piece
-	public Vector3 targetPosition; //temporary value for moving (used in coroutines)
+	public Vector3 targetPosition;//temporary value for moving (used in coroutines)
+	public Vector3 position;
 	Vector3 swordPosition;
 	Vector3 swordSize;
 	BoxCollider swordBox;
+	public int dir = 0;
 	public int speed = 4;
 	public float gridSize=1.6f;
 	private Animator animator;
 	public bool attacking = false;
 	public float attackTimer = 0f;
+	public Rigidbody swordleft;
+	public float projSpeed = 10f;
 
 	void Start()
 	{
@@ -31,12 +35,18 @@ public class LinkMovement2 : MonoBehaviour
 
 	void Update()
 	{
+		position = this.transform.position;
+		dir = animator.GetInteger("Direction");
+		projSpeed = 10f;
 		//----------------ATTACKING
 		attacking = false;
 		animator.SetBool ("attacking", false);
 		if (Input.GetKeyDown (KeyCode.J) || Input.GetKeyDown (KeyCode.X)) { 
 				animator.SetBool ("attacking", true);
+			if(attackTimer == 0)
 				attackTimer = .35f;
+			//if(health is full)
+			ShootSword(attackTimer, dir);
 		}
 		attackTimer -= Time.deltaTime;
 		if (attackTimer > 0f) {
@@ -104,6 +114,15 @@ public class LinkMovement2 : MonoBehaviour
 			StartCoroutine(MoveInGrid((float)transform.position.x, (float)transform.position.y-gridSize, (float)transform.position.z));
 		}
 		
+	}
+
+	void ShootSword(float attackTimer, int dir)
+	{
+		if (attackTimer == .35f) {
+			Rigidbody swordClone = (Rigidbody)Instantiate (swordleft, transform.position, transform.rotation);
+			swordClone.velocity = Vector3.left * projSpeed;
+			Destroy (swordClone.gameObject, 3f);
+		}
 	}
 	
 	//based off of http://answers.unity3d.com/questions/9885/basic-movement-in-a-grid.html
