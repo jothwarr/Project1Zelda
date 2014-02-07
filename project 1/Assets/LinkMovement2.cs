@@ -60,6 +60,7 @@ public class LinkMovement2 : MonoBehaviour
 			//canmove = true;
 		}
 		//----------------MOVEMENT
+		//canmove = canmove && !PauseMovement.isTimeStopped ();
 
 		if ((Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true) 
 		    && canmove == true && attacking == false)
@@ -126,7 +127,7 @@ public class LinkMovement2 : MonoBehaviour
 	}
 	
 	//based off of http://answers.unity3d.com/questions/9885/basic-movement-in-a-grid.html
-	IEnumerator MoveInGrid(float x,float y,float z)
+	public IEnumerator MoveInGrid(float x,float y,float z)
 	{
 		x = Mathf.Round (x * 100f) / 100f;
 		y = Mathf.Round (y * 100f) / 100f;
@@ -217,6 +218,7 @@ public class LinkMovement2 : MonoBehaviour
 		}
 		//the work is ended now congratulation
 		canmove = true;
+		//canmove = !PauseMovement.isTimeStopped ();
 	}
 }
 
