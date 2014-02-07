@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour {
 	public Vector3 targetPosition = Vector3.zero;
 	public int speed = 4;
 	public int dir = 3;
-	public float gridSize=1.6f;
+	public float gridSize=16f;
 	public bool canmove = true;
 	public float attackTimer = 1.5f;
 	LinkMovement2 targetScript;
@@ -17,6 +17,8 @@ public class EnemyMovement : MonoBehaviour {
 	void Start () {
 		linkObject = GameObject.Find("Link");
 		targetScript = linkObject.GetComponent<LinkMovement2>();
+		gridSize = 5;
+		speed = 40;
 	}
 
 	void OnTriggerEnter (Collider col)

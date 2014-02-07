@@ -11,8 +11,8 @@ public class LinkMovement2 : MonoBehaviour
 	Vector3 swordSize;
 	BoxCollider swordBox;
 	public int dir = 0;
-	public int speed = 4;
-	public float gridSize=1.6f;
+	public int speed;
+	public float gridSize;
 	private Animator animator;
 	public bool attacking = false;
 	public float attackTimer = 0f;
@@ -23,6 +23,9 @@ public class LinkMovement2 : MonoBehaviour
 	{
 		animator = this.gameObject.GetComponent<Animator>();
 		swordBox = this.gameObject.GetComponent<BoxCollider>();
+		projSpeed = 50f;
+		gridSize = 5;
+		speed = 50;
 	}
 	/*void OnTriggerEnter (Collider col)
 	{
@@ -37,7 +40,7 @@ public class LinkMovement2 : MonoBehaviour
 	{
 		position = this.transform.position;
 		dir = animator.GetInteger("Direction");
-		projSpeed = 10f;
+
 		//----------------ATTACKING
 		attacking = false;
 		animator.SetBool ("attacking", false);
@@ -66,10 +69,10 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 2);
-			swordPosition.x = .06f;
-			swordPosition.y = .04f;
-			swordSize.x = .06f;
-			swordSize.y = .2f;
+			swordPosition.x = .4f;
+			swordPosition.y = .5f;
+			swordSize.x = .2f;
+			swordSize.y = .8f;
 			swordBox.center = swordPosition;
 			swordBox.size = swordSize;
 			canmove = false;
@@ -79,10 +82,10 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 3);
-			swordPosition.x = .16f;
-			swordPosition.y = -.08f;
-			swordSize.x = .2f;
-			swordSize.y = .06f;
+			swordPosition.x = 1.3f;
+			swordPosition.y = -.53f;
+			swordSize.x = .8f;
+			swordSize.y = .2f;
 			swordBox.center = swordPosition;
 			swordBox.size = swordSize;
 			canmove = false;
@@ -92,10 +95,10 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 1);
-			swordPosition.x = -.04f;
-			swordPosition.y = -.08f;
-			swordSize.x = .2f;
-			swordSize.y = .06f;
+			swordPosition.x = -.45f;
+			swordPosition.y = -.53f;
+			swordSize.x = .8f;
+			swordSize.y = .2f;
 			swordBox.center = swordPosition;
 			swordBox.size = swordSize;
 			canmove = false;
@@ -105,10 +108,10 @@ public class LinkMovement2 : MonoBehaviour
 		    && canmove == true && attacking == false)
 		{
 			animator.SetInteger("Direction", 0);
-			swordPosition.x = .075f;
-			swordPosition.y = -.16f;
-			swordSize.x = .06f;
-			swordSize.y = .2f;
+			swordPosition.x = .53f;
+			swordPosition.y = -1.3f;
+			swordSize.x = .2f;
+			swordSize.y = .8f;
 			swordBox.center = swordPosition;
 			swordBox.size = swordSize;
 			canmove = false;
