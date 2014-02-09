@@ -7,17 +7,24 @@ using System.IO;
 
 public class LoadWorld : MonoBehaviour {
 	World overworld;
+	static Dictionary<string, string> prefabdict;
 
 	// Use this for initialization
 	void Start () {
-		Debug.LogWarning ("Entered LoadWorld.Start()");
+		//Debug.LogWarning ("Entered LoadWorld.Start()");
 		string path = Application.dataPath + "/overworld.xml";
 		XmlSerializer serializer = new XmlSerializer (typeof(World));
 		FileStream stream = new FileStream (path, FileMode.Open);
 		overworld = serializer.Deserialize (stream) as World;
 		stream.Close ();
-		Debug.LogWarning ("Read in overworld.xml");
-		Debug.LogWarning ("Number of Rooms: " + overworld.Rooms.Count);
+		//Debug.LogWarning ("Read in overworld.xml");
+		//Debug.LogWarning ("Number of Rooms: " + overworld.Rooms.Count);
+		initializeprefabdict ();
+		overworld.Initialize ();
+	}
+	
+	public void initializeprefabdict() {
+		prefabdict = new Dictionary<string, string> ();
 	}
 }
 
@@ -26,6 +33,12 @@ public class World {
 	[XmlArray("Rooms")]
 	[XmlArrayItem("Room")]
 	public List<Room> Rooms = new List<Room> ();
+
+	public void Initialize () {
+		foreach (Room room in Rooms) {
+			room.Initialize();
+		}
+	}
 }
 
 public class Room {
@@ -38,6 +51,12 @@ public class Room {
 	[XmlArray("Tiles")]
 	[XmlArrayItem("Tile")]
 	public List<Tile> Tiles = new List<Tile> ();
+
+	public void Initialize() {
+		foreach (Tile tile in Tiles) {
+			tile.Initialize(x, y);
+		}
+	}
 }
 
 public class Tile {
@@ -49,4 +68,16 @@ public class Tile {
 
 	[XmlAttribute("val")]
 	public string value;
+
+	[XmlAttribute("block")]
+	public string block;
+
+	public Vector3 position;
+
+	GameObject tileprefab;
+
+	public void Initialize (int x, int y) {
+		position = new Vector3 (16f * x + this.x, 11f * y + this.y, 0);
+		tileprefab = (GameObject) Object.Instantiate (Resources.Load("BlankTile"), position, Quaternion.identity);
+	}
 }

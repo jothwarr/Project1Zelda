@@ -9,10 +9,10 @@ public class CameraMovement : MonoBehaviour {
 	Vector3 move = new Vector3 (0f, 0f, 0f);
 	//float linkX;
 	//float linkY;
-	const float roomWidth = 25.6f;
-	const float roomHeight = 17.6f;
+	const float roomWidth = 16f;
+	const float roomHeight = 11f;
 	const float speed = roomWidth;
-	const float tileWidth = 1.6f;
+	const float tileWidth = 1f;
 	const float give = .1f;
 	bool isMoving = false;
 
