@@ -750,28 +750,28 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Enemies_78
       rect:
         serializedVersion: 2
-        x: 896
-        y: 32
-        width: 32
-        height: 32
+        x: 895
+        y: 48
+        width: 9
+        height: 17
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_79
       rect:
         serializedVersion: 2
-        x: 928
-        y: 32
-        width: 32
-        height: 32
+        x: 915
+        y: 51
+        width: 18
+        height: 9
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_80
       rect:
         serializedVersion: 2
-        x: 960
-        y: 32
-        width: 32
-        height: 32
+        x: 944
+        y: 47
+        width: 9
+        height: 17
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_81

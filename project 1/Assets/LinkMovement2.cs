@@ -16,30 +16,69 @@ public class LinkMovement2 : MonoBehaviour
 	private Animator animator;
 	public bool attacking = false;
 	public float attackTimer = 0f;
+	public Rigidbody sworddown;
 	public Rigidbody swordleft;
-	public float projSpeed = 10f;
+	public Rigidbody swordup;
+	public Rigidbody swordright;
+	public float projSpeed = 7f;
 
 	void Start()
 	{
 		animator = this.gameObject.GetComponent<Animator>();
 		swordBox = this.gameObject.GetComponent<BoxCollider>();
-		projSpeed = 50f;
-		gridSize = 5;
-		speed = 50;
+		projSpeed = 7f;
+		gridSize = 1;
+		speed = 5;
 	}
-	/*void OnTriggerEnter (Collider col)
+	void OnCollisionEnter(Collision col)
 	{
-		canmove = true;
-	}
-	void OnTriggerExit (Collider col)
-	{
-		canmove = true;
-	}*/
+		this.rigidbody.velocity = Vector3.zero;
+		this.rigidbody.angularVelocity = Vector3.zero;
+		this.rigidbody.freezeRotation = true;
+		this.rigidbody.isKinematic = true;
+		Vector3 fixedpos;
+		fixedpos.x = Mathf.Round(transform.position.x);
+		fixedpos.y = Mathf.Round(transform.position.y);
+		fixedpos.z = Mathf.Round(transform.position.z);
+		this.transform.position = fixedpos;
 
+		float angle = Vector3.Angle(col.contacts [0].normal, Vector3.right);
+		if (angle >= 135f || angle <= -135f) {
+			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+				//canmove = false;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x - gridSize), transform.position.y, transform.position.z));
+			}
+		}
+		if (angle <= 45f && angle >= -45f) {
+			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+				//canmove = false;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x + gridSize), transform.position.y, transform.position.z));
+			}
+		}
+		if (angle >= 45f && angle <= 135f) {
+			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+				//canmove = false;
+				StartCoroutine (MoveInGrid (transform.position.x, Mathf.Round(transform.position.y + gridSize), transform.position.z));
+			}
+		}
+		if (angle <= -45 && angle >= -135) {
+			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+				//canmove = false;
+				StartCoroutine (MoveInGrid (transform.position.x, Mathf.Round(transform.position.y - gridSize), transform.position.z));
+			}
+		}
+		if (col.gameObject.tag == "Projectile")
+			Destroy (col.gameObject);
+		this.rigidbody.isKinematic = false;
+	}
 	void Update()
 	{
 		position = this.transform.position;
 		dir = animator.GetInteger("Direction");
+		this.rigidbody.velocity = Vector3.zero;
+		this.rigidbody.angularVelocity = Vector3.zero;
+		this.rigidbody.freezeRotation = true;
+		swordBox.enabled = false;
 
 		//----------------ATTACKING
 		attacking = false;
@@ -54,6 +93,7 @@ public class LinkMovement2 : MonoBehaviour
 		attackTimer -= Time.deltaTime;
 		if (attackTimer > 0f) {
 			attacking = true;
+			swordBox.enabled = true;
 			swordBox.isTrigger = true;
 		}
 		else {
@@ -121,11 +161,29 @@ public class LinkMovement2 : MonoBehaviour
 	}
 
 	void ShootSword(float attackTimer, int dir)
-	{
-		if (attackTimer == .35f) {
-			Rigidbody swordClone = (Rigidbody)Instantiate (swordleft, transform.position, transform.rotation);
-			swordClone.velocity = Vector3.left * projSpeed;
-			Destroy (swordClone.gameObject, 3f);
+	{//dir: 0 = down, 1 = left, 2 = up, 3 = right
+		GameObject[] swords = GameObject.FindGameObjectsWithTag ("Sword");
+		if (attackTimer == .35f && swords.Length == 0) {
+			if(dir == 0){
+				Rigidbody swordClone = (Rigidbody)Instantiate (sworddown, transform.position + swordPosition, transform.rotation);
+				swordClone.velocity = Vector3.down * projSpeed;
+				Destroy (swordClone.gameObject, 2f);
+			}
+			if(dir == 1){
+				Rigidbody swordClone = (Rigidbody)Instantiate (swordleft, transform.position + swordPosition, transform.rotation);
+				swordClone.velocity = Vector3.left * projSpeed;
+				Destroy (swordClone.gameObject, 2f);
+			}
+			if(dir == 2){
+				Rigidbody swordClone = (Rigidbody)Instantiate (swordup, transform.position + swordPosition, transform.rotation);
+				swordClone.velocity = Vector3.up * projSpeed;
+				Destroy (swordClone.gameObject, 2f);
+			}
+			if(dir == 3){
+				Rigidbody swordClone = (Rigidbody)Instantiate (swordright, transform.position + swordPosition, transform.rotation);
+				swordClone.velocity = Vector3.right * projSpeed;
+				Destroy (swordClone.gameObject, 2f);
+			}
 		}
 	}
 	

@@ -11,14 +11,15 @@ public class EnemyMovement : MonoBehaviour {
 	public float attackTimer = 1.5f;
 	LinkMovement2 targetScript;
 	public Rigidbody projectile;
-	public float projSpeed = 15f;
+	public float projSpeed = 5f;
 	GameObject linkObject;
 	// Use this for initialization
 	void Start () {
 		linkObject = GameObject.Find("Link");
 		targetScript = linkObject.GetComponent<LinkMovement2>();
-		gridSize = 5;
-		speed = 40;
+		gridSize = 1;
+		speed = 3;
+		projSpeed = 5f;
 	}
 
 	void OnTriggerEnter (Collider col)
@@ -27,7 +28,8 @@ public class EnemyMovement : MonoBehaviour {
 		this.renderer.enabled = false;
 		this.gameObject.collider.enabled = false;
 		Destroy (this);
-
+		if (col.gameObject.tag == "Sword")
+			Destroy (col.gameObject);
 	}
 
 /*	void OnTriggerStay (Collider col)
@@ -52,28 +54,27 @@ public class EnemyMovement : MonoBehaviour {
 			dir = 2;//down
 		//dir = Random.Range (0, 20);
 
-		projSpeed = 15f;
 		//Attacking
 		if (dir == 0 && targetScript.position.x == transform.position.x && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position, transform.rotation);
+			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.down * gridSize, transform.rotation);
 			newProjectile.velocity = Vector3.down * projSpeed;
 			attackTimer = 1.5f;
 			Destroy (newProjectile.gameObject, 3f);
 		}
 		if (dir == 1 && targetScript.position.y == transform.position.y && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position, transform.rotation);
+			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.left * gridSize, transform.rotation);
 			newProjectile.velocity = Vector3.left * projSpeed;
 			attackTimer = 1.5f;
 			Destroy (newProjectile.gameObject, 3f);
 		}
 		if (dir == 2 && targetScript.position.x == transform.position.x && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position, transform.rotation);
+			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.up * gridSize, transform.rotation);
 			newProjectile.velocity = Vector3.up * projSpeed;
 			attackTimer = 1.5f;
 			Destroy (newProjectile.gameObject, 3f);
 		}
 		if (dir == 3 && targetScript.position.y == transform.position.y && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position, transform.rotation);
+			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.right * gridSize, transform.rotation);
 			newProjectile.velocity = Vector3.right * projSpeed;
 			attackTimer = 1.5f;
 			Destroy (newProjectile.gameObject, 3f);
@@ -85,21 +86,26 @@ public class EnemyMovement : MonoBehaviour {
 
 
 		//Movement
-		if (dir == 2 && canmove == true) {//up
-			canmove = false;
-			StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y + gridSize, (float)transform.position.z));
-		}
-		if (dir == 3 && canmove == true) {//right
-			canmove = false;
-			StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y, (float)transform.position.z));
-		}
-		if (dir == 1 && canmove == true) {//left
-			canmove = false;
-			StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y, (float)transform.position.z));
-		}
-		if (dir == 0 && canmove == true) {//down
-			canmove = false;
-			StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y - gridSize, (float)transform.position.z));
+
+		int rand = Random.Range (0, 15);
+		if (rand == 0) {
+
+			if (dir == 2 && canmove == true) {//up
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y + gridSize, (float)transform.position.z));
+			}
+			if (dir == 3 && canmove == true) {//right
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y, (float)transform.position.z));
+			}
+			if (dir == 1 && canmove == true) {//left
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y, (float)transform.position.z));
+			}
+			if (dir == 0 && canmove == true) {//down
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y - gridSize, (float)transform.position.z));
+			}
 		}
 	}
 
