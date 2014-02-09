@@ -7,24 +7,28 @@ using System.IO;
 
 public class LoadWorld : MonoBehaviour {
 	World overworld;
-	static Dictionary<string, string> prefabdict;
+	public static Dictionary<string, string> prefabdict;
 
 	// Use this for initialization
 	void Start () {
-		//Debug.LogWarning ("Entered LoadWorld.Start()");
-		string path = Application.dataPath + "/overworld.xml";
+		Debug.LogWarning ("Entered LoadWorld.Start()");
+		string path = Application.dataPath + "/smallworld.xml";
 		XmlSerializer serializer = new XmlSerializer (typeof(World));
 		FileStream stream = new FileStream (path, FileMode.Open);
 		overworld = serializer.Deserialize (stream) as World;
 		stream.Close ();
-		//Debug.LogWarning ("Read in overworld.xml");
-		//Debug.LogWarning ("Number of Rooms: " + overworld.Rooms.Count);
+		Debug.LogWarning ("Read in overworld.xml");
 		initializeprefabdict ();
+		Debug.LogWarning ("Initialized tile dictionary");
 		overworld.Initialize ();
+		Debug.LogWarning ("Initialized overworld");
 	}
 	
 	public void initializeprefabdict() {
 		prefabdict = new Dictionary<string, string> ();
+		prefabdict.Add ("02", "BlankTile");
+		prefabdict.Add ("18", "CaveTile");
+		prefabdict.Add ("1b", "TreeTile");
 	}
 }
 
@@ -53,9 +57,11 @@ public class Room {
 	public List<Tile> Tiles = new List<Tile> ();
 
 	public void Initialize() {
+		Debug.LogWarning ("Started Room");
 		foreach (Tile tile in Tiles) {
 			tile.Initialize(x, y);
 		}
+		Debug.LogWarning ("Finished Room");
 	}
 }
 
@@ -66,7 +72,7 @@ public class Tile {
 	[XmlAttribute("y")]
 	public int y;
 
-	[XmlAttribute("val")]
+	[XmlAttribute("value")]
 	public string value;
 
 	[XmlAttribute("block")]
@@ -77,7 +83,16 @@ public class Tile {
 	GameObject tileprefab;
 
 	public void Initialize (int x, int y) {
+		Debug.LogWarning ("Started Tile");
 		position = new Vector3 (16f * x + this.x, 11f * y + this.y, 0);
+		string tiletype;
+		if (value != null && LoadWorld.prefabdict.TryGetValue (value, out tiletype)) {
+			tiletype = "BlankTile";
+		}
+		else {
+			tiletype = "BlankTile";
+		}
 		tileprefab = (GameObject) Object.Instantiate (Resources.Load("BlankTile"), position, Quaternion.identity);
+		Debug.LogWarning ("Finished Tile");
 	}
 }
