@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 using System.IO;
 
 public class LoadWorld : MonoBehaviour {
-	World overworld;
+	public static World overworld;
 	public static Dictionary<string, GameObject> prefabdict;
 	public static GameObject defaulttile;
 
@@ -18,7 +18,7 @@ public class LoadWorld : MonoBehaviour {
 		overworld = serializer.Deserialize (stream) as World;
 		stream.Close ();
 		initializeprefabdict ();
-		overworld.Initialize ();
+		overworld.loadRoom (7, 7);
 	}
 	
 	public void initializeprefabdict() {
@@ -105,10 +105,8 @@ public class World {
 	[XmlArrayItem("Room")]
 	public List<Room> Rooms = new List<Room> ();
 
-	public void Initialize () {
-		foreach (Room room in Rooms) {
-			room.Initialize();
-		}
+	public void loadRoom(int x, int y) {
+		Rooms[x * 8 + y].Initialize();
 	}
 }
 

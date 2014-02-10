@@ -9,12 +9,15 @@ public class CameraMovement : MonoBehaviour {
 	Vector3 move = new Vector3 (0f, 0f, 0f);
 	//float linkX;
 	//float linkY;
+	int roomx = 7;
+	int roomy = 7;
 	const float roomWidth = 16f;
 	const float roomHeight = 11f;
 	const float speed = roomWidth;
 	const float tileWidth = 1f;
 	const float give = .1f;
 	bool isMoving = false;
+	LoadWorld loadWorld;
 
 	float truncate (float input) {
 		return Mathf.Round (input * 100f) / 100f;
@@ -24,7 +27,7 @@ public class CameraMovement : MonoBehaviour {
 	void Start () {
 		link = GameObject.Find ("Link").transform;
 		//linkInstance = GameObject.Find ("Link").GetComponent<LinkMovement2> ();
-		room = new Rect (112f, -77f, roomWidth, roomHeight);
+		room = new Rect (roomx * roomWidth, roomy * roomHeight * -1, roomWidth, roomHeight);
 		//linkX = link.position.x;
 		//linkY = link.position.y;
 	}
@@ -38,22 +41,26 @@ public class CameraMovement : MonoBehaviour {
 			if (truncate(link.position.x) > room.x + room.width - tileWidth + give) {
 				newRect.x += newRect.width;
 				translation.x += newRect.width;
+				roomx = roomx + 1;
 				//linkX = link.position.x + tileWidth;
 			}
 			if (truncate(link.position.x) < room.x - give) {
 				newRect.x -= newRect.width;
 				translation.x -= newRect.width;
 				//linkX = link.position.x - tileWidth;
+				roomx = roomx - 1;
 			}
 			if (truncate(link.position.y) > room.y + give) {
 				newRect.y += newRect.height;
 				translation.y += newRect.height;
 				//linkY = link.position.y + tileWidth;
+				roomy = roomy - 1;
 			}
 			if (truncate(link.position.y) < room.y - room.height + tileWidth - give) {
 				newRect.y -= newRect.height;
 				translation.y -= newRect.height;
 				//linkY = link.position.y - tileWidth;
+				roomy = roomy + 1;
 			}
 			room = newRect;
 		}
@@ -71,7 +78,7 @@ public class CameraMovement : MonoBehaviour {
 		if (!PauseMovement.isTimeStopped() && move.magnitude >= give) {
 			PauseMovement.stopEverything ();
 			isMoving = true;
-			//StartCoroutine(linkInstance.MoveInGrid(linkX, linkY, link.position.z));
+			LoadWorld.overworld.loadRoom(roomx, roomy);
 		}
 
 		//Move camera
