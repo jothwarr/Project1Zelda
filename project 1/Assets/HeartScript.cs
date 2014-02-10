@@ -9,8 +9,8 @@ public class HeartScript : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.name == "Link") {
-			linkScript.health += 1.5f;
 			Destroy (this.gameObject);
+			linkScript.health += 1f;
 			if (linkScript.health >= 3f)
 				linkScript.health = 3f;
 		}
@@ -19,8 +19,8 @@ public class HeartScript : MonoBehaviour {
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag != "Sword") {
-			linkScript.health += 1f;
 			Destroy (this.gameObject);
+			linkScript.health += 1f;
 			if (linkScript.health >= 3f)
 				linkScript.health = 3f;
 		}
@@ -30,6 +30,7 @@ public class HeartScript : MonoBehaviour {
 	void Start () {
 		linkObject = GameObject.Find("Link");
 		linkScript = linkObject.GetComponent<LinkMovement2>();
+		Destroy (this.gameObject, 8f);
 	}
 	
 	// Update is called once per frame

@@ -56,26 +56,28 @@ public class KeeseMovement : MonoBehaviour {
 		//dir = Random.Range (0, 20);
 
 		//Movement
-		
-		int rand = Random.Range (0, 20);
-		if (rand == 0) {
-			int randMove = Random.Range (-1, 1);
-			
-			if (dir == 2 && canmove == true) {//up
-				canmove = false;
-				StartCoroutine (MoveInGrid ((float)transform.position.x + randMove * gridSize, (float)transform.position.y + gridSize, (float)transform.position.z));
-			}
-			if (dir == 3 && canmove == true) {//right
-				canmove = false;
-				StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y + randMove * gridSize, (float)transform.position.z));
-			}
-			if (dir == 1 && canmove == true) {//left
-				canmove = false;
-				StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y + randMove * gridSize, (float)transform.position.z));
-			}
-			if (dir == 0 && canmove == true) {//down
-				canmove = false;
-				StartCoroutine (MoveInGrid ((float)transform.position.x + randMove * gridSize, (float)transform.position.y - gridSize, (float)transform.position.z));
+		float distance = Vector3.Distance (transform.position, linkObject.transform.position);
+		if (distance <= 15f) {
+			int rand = Random.Range (0, 20);
+			if (rand == 0) {
+				int randMove = Random.Range (-1, 1);
+
+				if (dir == 2 && canmove == true) {//up
+					canmove = false;
+					StartCoroutine (MoveInGrid ((float)transform.position.x + randMove * gridSize, (float)transform.position.y + gridSize, (float)transform.position.z));
+				}
+				if (dir == 3 && canmove == true) {//right
+					canmove = false;
+					StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y + randMove * gridSize, (float)transform.position.z));
+				}
+				if (dir == 1 && canmove == true) {//left
+					canmove = false;
+					StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y + randMove * gridSize, (float)transform.position.z));
+				}
+				if (dir == 0 && canmove == true) {//down
+					canmove = false;
+					StartCoroutine (MoveInGrid ((float)transform.position.x + randMove * gridSize, (float)transform.position.y - gridSize, (float)transform.position.z));
+				}
 			}
 		}
 	}

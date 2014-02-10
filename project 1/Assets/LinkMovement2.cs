@@ -47,7 +47,8 @@ public class LinkMovement2 : MonoBehaviour
 		this.transform.position = fixedpos;
 		hit = true;
 		hitTimer = .3f;
-		health -= .5f;
+		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile")
+			health -= .5f;
 
 		float angle = Vector3.Angle(col.contacts [0].normal, Vector3.right);
 		if (angle >= 135f || angle <= -135f) {
@@ -118,8 +119,8 @@ public class LinkMovement2 : MonoBehaviour
 				animator.SetBool ("attacking", true);
 			if(attackTimer == 0)
 				attackTimer = .35f;
-			//if(health is full)
-			ShootSword(attackTimer, dir);
+			if(health == 3)
+				ShootSword(attackTimer, dir);
 		}
 		attackTimer -= Time.deltaTime;
 		if (attackTimer > 0f) {

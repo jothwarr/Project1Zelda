@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour {
 		linkObject = GameObject.Find("Link");
 		targetScript = linkObject.GetComponent<LinkMovement2>();
 		gridSize = 1;
-		speed = 3;
+		speed = 2;
 		projSpeed = 5f;
 	}
 
@@ -62,41 +62,43 @@ public class EnemyMovement : MonoBehaviour {
 			dir = 2;//down
 		//dir = Random.Range (0, 20);
 
-		//Attacking
-		if (dir == 0 && targetScript.position.x == transform.position.x && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.down * gridSize, transform.rotation);
-			newProjectile.velocity = Vector3.down * projSpeed;
-			attackTimer = 1.5f;
-			Destroy (newProjectile.gameObject, 3f);
-		}
-		if (dir == 1 && targetScript.position.y == transform.position.y && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.left * gridSize, transform.rotation);
-			newProjectile.velocity = Vector3.left * projSpeed;
-			attackTimer = 1.5f;
-			Destroy (newProjectile.gameObject, 3f);
-		}
-		if (dir == 2 && targetScript.position.x == transform.position.x && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.up * gridSize, transform.rotation);
-			newProjectile.velocity = Vector3.up * projSpeed;
-			attackTimer = 1.5f;
-			Destroy (newProjectile.gameObject, 3f);
-		}
-		if (dir == 3 && targetScript.position.y == transform.position.y && attackTimer == 0){
-			Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.right * gridSize, transform.rotation);
-			newProjectile.velocity = Vector3.right * projSpeed;
-			attackTimer = 1.5f;
-			Destroy (newProjectile.gameObject, 3f);
-		}
+		float distance = Vector3.Distance (transform.position, linkObject.transform.position);
+		if (distance <= 15f) {
+			//Attacking
+			if (dir == 0 && targetScript.position.x == transform.position.x && attackTimer == 0) {
+				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.down * gridSize, transform.rotation);
+				newProjectile.velocity = Vector3.down * projSpeed;
+				attackTimer = 1.5f;
+				Destroy (newProjectile.gameObject, 3f);
+			}
+			if (dir == 1 && targetScript.position.y == transform.position.y && attackTimer == 0) {
+				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.left * gridSize, transform.rotation);
+				newProjectile.velocity = Vector3.left * projSpeed;
+				attackTimer = 1.5f;
+				Destroy (newProjectile.gameObject, 3f);
+			}
+			if (dir == 2 && targetScript.position.x == transform.position.x && attackTimer == 0) {
+				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.up * gridSize, transform.rotation);
+				newProjectile.velocity = Vector3.up * projSpeed;
+				attackTimer = 1.5f;
+				Destroy (newProjectile.gameObject, 3f);
+			}
+			if (dir == 3 && targetScript.position.y == transform.position.y && attackTimer == 0) {
+				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.right * gridSize, transform.rotation);
+				newProjectile.velocity = Vector3.right * projSpeed;
+				attackTimer = 1.5f;
+				Destroy (newProjectile.gameObject, 3f);
+			}
 
-		attackTimer -= Time.deltaTime;
-		if (attackTimer < 0)
-			attackTimer = 0f;
-
+			attackTimer -= Time.deltaTime;
+			if (attackTimer < 0)
+					attackTimer = 0f;
+		}
 
 		//Movement
 
-		int rand = Random.Range (0, 15);
-		if (rand == 0) {
+
+		if (distance <= 15f) {
 
 			if (dir == 2 && canmove == true) {//up
 				canmove = false;
