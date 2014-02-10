@@ -10,13 +10,15 @@ public class LoadWorld : MonoBehaviour {
 	public static Dictionary<string, GameObject> prefabdict;
 	public static GameObject defaulttile;
 
+	public TextAsset overworldXML;
+
 	// Use this for initialization
 	void Start () {
-		string path = Application.dataPath + "/overworld.xml";
+		overworldXML = (TextAsset) Resources.Load ("overworld");
 		XmlSerializer serializer = new XmlSerializer (typeof(World));
-		FileStream stream = new FileStream (path, FileMode.Open);
-		overworld = serializer.Deserialize (stream) as World;
-		stream.Close ();
+		TextReader reader = new StringReader (overworldXML.text);
+		overworld = serializer.Deserialize (reader) as World;
+		reader.Close ();
 		initializeprefabdict ();
 		overworld.loadRoom (7, 7);
 	}
