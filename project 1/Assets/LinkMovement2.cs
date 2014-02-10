@@ -7,6 +7,8 @@ public class LinkMovement2 : MonoBehaviour
 	public bool canmove = true; //indicate if a keyboard key can move a piece
 	public Vector3 targetPosition;//temporary value for moving (used in coroutines)
 	public Vector3 position;
+	public float health;
+	public float stuckTimer;
 	Vector3 swordPosition;
 	Vector3 swordSize;
 	BoxCollider swordBox;
@@ -15,7 +17,9 @@ public class LinkMovement2 : MonoBehaviour
 	public float gridSize;
 	private Animator animator;
 	public bool attacking = false;
+	public bool hit = false;
 	public float attackTimer = 0f;
+	public float hitTimer = 0f;
 	public Rigidbody sworddown;
 	public Rigidbody swordleft;
 	public Rigidbody swordup;
@@ -29,47 +33,56 @@ public class LinkMovement2 : MonoBehaviour
 		projSpeed = 7f;
 		gridSize = 1;
 		speed = 5;
+		health = 3f;
 	}
 	void OnCollisionEnter(Collision col)
 	{
 		this.rigidbody.velocity = Vector3.zero;
 		this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
-		this.rigidbody.isKinematic = true;
 		Vector3 fixedpos;
 		fixedpos.x = Mathf.Round(transform.position.x);
 		fixedpos.y = Mathf.Round(transform.position.y);
 		fixedpos.z = Mathf.Round(transform.position.z);
 		this.transform.position = fixedpos;
+		hit = true;
+		hitTimer = .3f;
+		health -= .5f;
 
 		float angle = Vector3.Angle(col.contacts [0].normal, Vector3.right);
 		if (angle >= 135f || angle <= -135f) {
 			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
-				//canmove = false;
-				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x - gridSize), transform.position.y, transform.position.z));
+				canmove = false;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x - gridSize), Mathf.Round(transform.position.y), transform.position.z));
 			}
 		}
-		if (angle <= 45f && angle >= -45f) {
+		else if (angle <= 45f && angle >= -45f) {
 			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
-				//canmove = false;
-				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x + gridSize), transform.position.y, transform.position.z));
+				canmove = false;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x + gridSize), Mathf.Round(transform.position.y), transform.position.z));
 			}
 		}
-		if (angle >= 45f && angle <= 135f) {
-			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
-				//canmove = false;
-				StartCoroutine (MoveInGrid (transform.position.x, Mathf.Round(transform.position.y + gridSize), transform.position.z));
+		else {
+			angle = Vector3.Angle (col.contacts [0].normal, Vector3.up);
+			if (angle <= 45f && angle >= -45f) {
+				if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+					canmove = false;
+					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y + gridSize), transform.position.z));
+				}
+			}
+			else /*if (angle <= 45f && angle >= -45f)*/ {
+				if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+					canmove = false;
+					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y - gridSize), transform.position.z));
+				}
 			}
 		}
-		if (angle <= -45 && angle >= -135) {
-			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
-				//canmove = false;
-				StartCoroutine (MoveInGrid (transform.position.x, Mathf.Round(transform.position.y - gridSize), transform.position.z));
-			}
-		}
+		fixedpos.x = Mathf.Round(transform.position.x);
+		fixedpos.y = Mathf.Round(transform.position.y);
+		fixedpos.z = Mathf.Round(transform.position.z);
+		this.transform.position = fixedpos;
 		if (col.gameObject.tag == "Projectile")
 			Destroy (col.gameObject);
-		this.rigidbody.isKinematic = false;
 	}
 	void Update()
 	{
@@ -79,6 +92,24 @@ public class LinkMovement2 : MonoBehaviour
 		this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
 		swordBox.enabled = false;
+
+		if (hitTimer > 0)
+				hitTimer -= Time.deltaTime;
+		if (hitTimer <= 0) {
+			hit = false;
+			hitTimer = 0f;
+		}
+
+		if (health <= 0f) {
+			Debug.Log ("You died. Press R to restart");
+			Time.timeScale = 0;
+			if(Input.GetKeyDown(KeyCode.R)){
+				Application.LoadLevel (Application.loadedLevel);
+				Time.timeScale = 1;
+				health = 3f;
+				Debug.Log("");
+			}
+		}
 
 		//----------------ATTACKING
 		attacking = false;
@@ -104,58 +135,55 @@ public class LinkMovement2 : MonoBehaviour
 		}
 		//----------------MOVEMENT
 		//canmove = canmove && !PauseMovement.isTimeStopped ();
-
-		if ((Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true) 
-		    && canmove == true && attacking == false)
-		{
-			animator.SetInteger("Direction", 2);
-			swordPosition.x = .4f;
-			swordPosition.y = .5f;
-			swordSize.x = .2f;
-			swordSize.y = .8f;
-			swordBox.center = swordPosition;
-			swordBox.size = swordSize;
-			canmove = false;
-			StartCoroutine (MoveInGrid((float)transform.position.x, (float)transform.position.y+gridSize, (float)transform.position.z));
-		}
-		if ((Input.GetKey(KeyCode.RightArrow) == true || Input.GetKey(KeyCode.D) == true) 
-		    && canmove == true && attacking == false)
-		{
-			animator.SetInteger("Direction", 3);
-			swordPosition.x = 1.3f;
-			swordPosition.y = -.53f;
-			swordSize.x = .8f;
-			swordSize.y = .2f;
-			swordBox.center = swordPosition;
-			swordBox.size = swordSize;
-			canmove = false;
-			StartCoroutine(MoveInGrid((float)transform.position.x+gridSize, (float)transform.position.y, (float)transform.position.z));
-		}
-		if ((Input.GetKey(KeyCode.LeftArrow) == true || Input.GetKey(KeyCode.A) == true) 
-		    && canmove == true && attacking == false)
-		{
-			animator.SetInteger("Direction", 1);
-			swordPosition.x = -.45f;
-			swordPosition.y = -.53f;
-			swordSize.x = .8f;
-			swordSize.y = .2f;
-			swordBox.center = swordPosition;
-			swordBox.size = swordSize;
-			canmove = false;
-			StartCoroutine(MoveInGrid((float)transform.position.x-gridSize, (float)transform.position.y, (float)transform.position.z));
-		}
-		if ((Input.GetKey(KeyCode.DownArrow) == true || Input.GetKey(KeyCode.S) == true) 
-		    && canmove == true && attacking == false)
-		{
-			animator.SetInteger("Direction", 0);
-			swordPosition.x = .53f;
-			swordPosition.y = -1.3f;
-			swordSize.x = .2f;
-			swordSize.y = .8f;
-			swordBox.center = swordPosition;
-			swordBox.size = swordSize;
-			canmove = false;
-			StartCoroutine(MoveInGrid((float)transform.position.x, (float)transform.position.y-gridSize, (float)transform.position.z));
+		if (hit == false) {
+			if ((Input.GetKey (KeyCode.UpArrow) == true || Input.GetKey (KeyCode.W) == true) 
+				&& canmove == true && attacking == false) {
+				animator.SetInteger ("Direction", 2);
+				swordPosition.x = .4f;
+				swordPosition.y = .5f;
+				swordSize.x = .2f;
+				swordSize.y = .8f;
+				swordBox.center = swordPosition;
+				swordBox.size = swordSize;
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y + gridSize, (float)transform.position.z));
+			}
+			if ((Input.GetKey (KeyCode.RightArrow) == true || Input.GetKey (KeyCode.D) == true) 
+				&& canmove == true && attacking == false) {
+				animator.SetInteger ("Direction", 3);
+				swordPosition.x = 1.3f;
+				swordPosition.y = -.53f;
+				swordSize.x = .8f;
+				swordSize.y = .2f;
+				swordBox.center = swordPosition;
+				swordBox.size = swordSize;
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y, (float)transform.position.z));
+			}
+			if ((Input.GetKey (KeyCode.LeftArrow) == true || Input.GetKey (KeyCode.A) == true) 
+				&& canmove == true && attacking == false) {
+				animator.SetInteger ("Direction", 1);
+				swordPosition.x = -.45f;
+				swordPosition.y = -.53f;
+				swordSize.x = .8f;
+				swordSize.y = .2f;
+				swordBox.center = swordPosition;
+				swordBox.size = swordSize;
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y, (float)transform.position.z));
+			}
+			if ((Input.GetKey (KeyCode.DownArrow) == true || Input.GetKey (KeyCode.S) == true) 
+				&& canmove == true && attacking == false) {
+				animator.SetInteger ("Direction", 0);
+				swordPosition.x = .53f;
+				swordPosition.y = -1.3f;
+				swordSize.x = .2f;
+				swordSize.y = .8f;
+				swordBox.center = swordPosition;
+				swordBox.size = swordSize;
+				canmove = false;
+				StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y - gridSize, (float)transform.position.z));
+			}
 		}
 		
 	}
@@ -190,11 +218,13 @@ public class LinkMovement2 : MonoBehaviour
 	//based off of http://answers.unity3d.com/questions/9885/basic-movement-in-a-grid.html
 	public IEnumerator MoveInGrid(float x,float y,float z)
 	{
-		x = Mathf.Round (x * 100f) / 100f;
-		y = Mathf.Round (y * 100f) / 100f;
-		z = Mathf.Round (z * 100f) / 100f;
-		while (transform.position.x != x || transform.position.y != y || transform.position.z != z)
+		stuckTimer = 0f;
+		x = Mathf.Round(x);
+		y = Mathf.Round(y);
+		z = Mathf.Round(z);
+		while ((transform.position.x != x || transform.position.y != y) && stuckTimer <= .5f /*|| transform.position.z != z*/)
 		{
+			stuckTimer += Time.deltaTime;
 			//moving x forward
 			if (transform.position.x < x)
 			{
@@ -273,8 +303,20 @@ public class LinkMovement2 : MonoBehaviour
 			{
 				targetPosition.z = 0;
 			}
+			/*Vector3 hitPos;
+			hitPos.x = x;
+			hitPos.y = y;
+			hitPos.z = z;
+			if(hit){
+				transform.position = Vector3.Lerp(transform.position, hitPos, 1);
+				//targetPosition = Vector3.zero;
+			}
+			else*/
+				transform.position = Vector3.Lerp(transform.position, transform.position + targetPosition, 1);
+				//transform.Translate(targetPosition);
+			//if(stuckTimer >= .2f)
+			//	transform.position = hitPos;
 
-			transform.Translate(targetPosition);
 			yield return 0;
 		}
 		//the work is ended now congratulation

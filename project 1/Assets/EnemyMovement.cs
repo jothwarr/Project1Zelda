@@ -8,9 +8,11 @@ public class EnemyMovement : MonoBehaviour {
 	public int dir = 3;
 	public float gridSize=16f;
 	public bool canmove = true;
+	public bool dead = false;
 	public float attackTimer = 1.5f;
 	LinkMovement2 targetScript;
 	public Rigidbody projectile;
+	public Rigidbody heart;
 	public float projSpeed = 5f;
 	GameObject linkObject;
 	// Use this for initialization
@@ -27,23 +29,29 @@ public class EnemyMovement : MonoBehaviour {
 		col.gameObject.transform.Translate (Vector3.zero);
 		this.renderer.enabled = false;
 		this.gameObject.collider.enabled = false;
-		Destroy (this);
-		if (col.gameObject.tag == "Sword")
+		if (col.gameObject.tag == "Sword") {
 			Destroy (col.gameObject);
+		}
+		dead = true;
+
+		//int rand = Random.Range (0, 2);
+		//if (rand == 0) {
+		//Rigidbody newHeart = (Rigidbody)Instantiate (heart, transform.position + Vector3.zero, transform.rotation);
+		//}
 	}
-
-/*	void OnTriggerStay (Collider col)
-	{
-		col.gameObject.transform.Translate (Vector3.zero);
-		this.renderer.enabled = false;
-		this.gameObject.collider.enabled = false;
-		Destroy (this);
-	}*/
-
 
 
 	// Update is called once per frame
 	void Update () {
+
+		if (dead == true) {
+			Rigidbody newHeart = (Rigidbody)Instantiate (heart, transform.position + Vector3.zero, transform.rotation);
+			int rando = Random.Range (0, 2);
+			if (rando == 0)
+				Destroy(newHeart.gameObject);
+			Destroy(this.gameObject);
+		}
+
 		if (linkObject.transform.position.x < this.transform.position.x)
 			dir = 1;//left
 		if (linkObject.transform.position.x > this.transform.position.x)
