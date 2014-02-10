@@ -831,10 +831,10 @@ TextureImporter:
     - name: NES - Legend of Zelda The - Overworld Enemies_87
       rect:
         serializedVersion: 2
-        x: 1184
-        y: 32
-        width: 32
-        height: 32
+        x: 1180
+        y: 47
+        width: 15
+        height: 9
       alignment: 1
       pivot: {x: 0, y: 1}
     - name: NES - Legend of Zelda The - Overworld Enemies_88
