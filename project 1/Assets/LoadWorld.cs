@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
+using System;
 
 public class LoadWorld : MonoBehaviour {
 	public static World overworld;
@@ -152,15 +153,15 @@ public class Tile {
 		GameObject tile;
 		if (!LoadWorld.prefabdict.TryGetValue (value, out tile))
 						tile = LoadWorld.defaulttile;
-		tileprefab = (GameObject) Object.Instantiate (tile, position, Quaternion.identity);
+		tileprefab = (GameObject) UnityEngine.Object.Instantiate (tile, position, Quaternion.identity);
 
-		//if(block == true){
-		tileprefab.AddComponent ("Rigidbody");
-		tileprefab.rigidbody.useGravity = false;
-		tileprefab.AddComponent ("BoxCollider");
-		tileprefab.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-		position.z = -1;
-		tileprefab.transform.position = position;
-		//}
+		if(block != null && String.Compare(block, "X") == 0){
+			tileprefab.AddComponent ("Rigidbody");
+			tileprefab.rigidbody.useGravity = false;
+			tileprefab.AddComponent ("BoxCollider");
+			tileprefab.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+			position.z = -1;
+			tileprefab.transform.position = position;
+		}
 	}
 }
