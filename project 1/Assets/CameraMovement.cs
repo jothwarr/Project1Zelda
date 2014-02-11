@@ -29,7 +29,7 @@ public class CameraMovement : MonoBehaviour {
 	void Start () {
 		link = GameObject.Find ("Link").transform;
 		//linkInstance = GameObject.Find ("Link").GetComponent<LinkMovement2> ();
-		room = new Rect (roomx * roomWidth, roomy * roomHeight * -1, roomWidth, roomHeight);
+		room = new Rect (roomx * roomWidth, roomy * roomHeight * -1 + 1, roomWidth, roomHeight);
 		//linkX = link.position.x;
 		//linkY = link.position.y;
 	}
