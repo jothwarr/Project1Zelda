@@ -10,6 +10,7 @@ public class LoadWorld : MonoBehaviour {
 	public static World overworld;
 	public static Dictionary<string, GameObject> prefabdict;
 	public static GameObject defaulttile;
+	public static GameObject defaultenemy;
 
 	public TextAsset overworldXML;
 
@@ -99,6 +100,9 @@ public class LoadWorld : MonoBehaviour {
 		prefabdict.Add ("95", (GameObject) Resources.Load ("Tile8f"));
 		prefabdict.Add ("96", (GameObject) Resources.Load ("Tile90"));
 		prefabdict.Add ("97", (GameObject) Resources.Load ("Tile91"));
+		defaultenemy = (GameObject)Resources.Load ("Octorok");
+		prefabdict.Add ("Keese", (GameObject) Resources.Load ("Keese"));
+		prefabdict.Add ("Octorok", defaultenemy);
 	}
 }
 
@@ -128,15 +132,27 @@ public class Room {
 	[XmlArrayItem("Tile")]
 	public List<Tile> Tiles = new List<Tile> ();
 
+	[XmlArray("Enemies")]
+	[XmlArrayItem("Enemy")]
+	public List<Enemy> Enemies = new List<Enemy> ();
+
 	public void Initialize() {
 		foreach (Tile tile in Tiles) {
 			tile.Initialize(x, y);
+		}
+		
+		foreach (Enemy enemy in Enemies) {
+			enemy.Initialize(x, y);
 		}
 	}
 
 	public void Destroy() {
 		foreach (Tile tile in Tiles) {
 			tile.Destroy(x, y);
+		}
+
+		foreach (Enemy enemy in Enemies) {
+			enemy.Destroy(x, y);
 		}
 	}
 }
@@ -177,5 +193,31 @@ public class Tile {
 
 	public void Destroy (int x, int y) {
 		UnityEngine.Object.Destroy (tileobject);
+	}
+}
+
+public class Enemy {
+	[XmlAttribute("x")]
+	public int x;
+	
+	[XmlAttribute("y")]
+	public int y;
+	
+	[XmlAttribute("value")]
+	public string value;
+
+	public Vector3 position;
+	
+	GameObject enemyobject;
+
+	public void Initialize (int x, int y) {
+		position = new Vector3 (16f * x + this.x, -11f * y - this.y, -1);
+		GameObject temp;
+		if (!LoadWorld.prefabdict.TryGetValue (value, out temp))
+			temp = LoadWorld.defaultenemy;
+		enemyobject = (GameObject) UnityEngine.Object.Instantiate (temp, position, Quaternion.identity);
+	}
+
+	public void Destroy (int x, int y) {
 	}
 }
