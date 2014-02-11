@@ -11,6 +11,8 @@ public class CameraMovement : MonoBehaviour {
 	//float linkY;
 	int roomx = 7;
 	int roomy = 7;
+	int oldroomx = 7;
+	int oldroomy = 7;
 	const float roomWidth = 16f;
 	const float roomHeight = 11f;
 	const float speed = roomWidth;
@@ -90,6 +92,9 @@ public class CameraMovement : MonoBehaviour {
 			PauseMovement.startEverything ();
 			PauseMovement.unfreezeTime();
 			isMoving = false;
+			LoadWorld.overworld.destroyRoom(oldroomx, oldroomy);
+			oldroomx = roomx;
+			oldroomy = roomy;
 		}
 	}
 }

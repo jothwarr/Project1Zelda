@@ -111,6 +111,10 @@ public class World {
 	public void loadRoom(int x, int y) {
 		Rooms[x * 8 + y].Initialize();
 	}
+
+	public void destroyRoom(int x, int y) {
+			Rooms [x * 8 + y].Destroy ();
+	}
 }
 
 public class Room {
@@ -127,6 +131,12 @@ public class Room {
 	public void Initialize() {
 		foreach (Tile tile in Tiles) {
 			tile.Initialize(x, y);
+		}
+	}
+
+	public void Destroy() {
+		foreach (Tile tile in Tiles) {
+			tile.Destroy(x, y);
 		}
 	}
 }
@@ -146,22 +156,26 @@ public class Tile {
 
 	public Vector3 position;
 
-	GameObject tileprefab;
+	GameObject tileobject;
 
 	public void Initialize (int x, int y) {
 		position = new Vector3 (16f * x + this.x, -11f * y - this.y, 0);
 		GameObject tile;
 		if (!LoadWorld.prefabdict.TryGetValue (value, out tile))
 						tile = LoadWorld.defaulttile;
-		tileprefab = (GameObject) UnityEngine.Object.Instantiate (tile, position, Quaternion.identity);
+		tileobject = (GameObject) UnityEngine.Object.Instantiate (tile, position, Quaternion.identity);
 
 		if(block != null && String.Compare(block, "X") == 0){
-			tileprefab.AddComponent ("Rigidbody");
-			tileprefab.rigidbody.useGravity = false;
-			tileprefab.AddComponent ("BoxCollider");
-			tileprefab.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+			tileobject.AddComponent ("Rigidbody");
+			tileobject.rigidbody.useGravity = false;
+			tileobject.AddComponent ("BoxCollider");
+			tileobject.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 			position.z = -1;
-			tileprefab.transform.position = position;
+			tileobject.transform.position = position;
 		}
+	}
+
+	public void Destroy (int x, int y) {
+		UnityEngine.Object.Destroy (tileobject);
 	}
 }
