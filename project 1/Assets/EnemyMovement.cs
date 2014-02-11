@@ -63,7 +63,7 @@ public class EnemyMovement : MonoBehaviour {
 		//dir = Random.Range (0, 20);
 
 		float distance = Vector3.Distance (transform.position, linkObject.transform.position);
-		if (distance <= 15f) {
+		if (distance <= 15f/*if in view of camera*/) {
 			//Attacking
 			if (dir == 0 && targetScript.position.x == transform.position.x && attackTimer == 0) {
 				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.down * gridSize, transform.rotation);
@@ -96,7 +96,15 @@ public class EnemyMovement : MonoBehaviour {
 		}
 
 		//Movement
-
+		int randMove = Random.Range (0, 15);
+		if (randMove == 0)
+			dir = 0;
+		if (randMove == 1)
+			dir = 1;
+		if (randMove == 2)
+			dir = 2;
+		if (randMove == 3)
+			dir = 3;
 
 		if (distance <= 15f) {
 
