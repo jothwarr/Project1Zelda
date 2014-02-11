@@ -25,6 +25,7 @@ public class LinkMovement2 : MonoBehaviour
 	public Rigidbody swordup;
 	public Rigidbody swordright;
 	public float projSpeed = 7f;
+	public Rect deadRect;
 
 	void Start()
 	{
@@ -102,6 +103,11 @@ public class LinkMovement2 : MonoBehaviour
 		}
 
 		if (health <= 0f) {
+			deadRect.x = 0;//transform.position.x;
+			deadRect.y = 0;//transform.position.y;
+			deadRect.height = 20;
+			deadRect.width = 150;
+			GUI.Label(deadRect, "You died. Press R to restart");
 			Debug.Log ("You died. Press R to restart");
 			Time.timeScale = 0;
 			if(Input.GetKeyDown(KeyCode.R)){

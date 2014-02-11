@@ -9,6 +9,7 @@ public class KeeseMovement : MonoBehaviour {
 	public float gridSize=16f;
 	public bool canmove = true;
 	public bool dead = false;
+	public float stuckTimer = 0f;
 	LinkMovement2 targetScript;
 	public Rigidbody heart;
 	GameObject linkObject;
@@ -57,8 +58,8 @@ public class KeeseMovement : MonoBehaviour {
 
 		//Movement
 		float distance = Vector3.Distance (transform.position, linkObject.transform.position);
-		if (distance <= 15f) {
-			int rand = Random.Range (0, 20);
+		if (distance <= 15f/*renderer.isVisible*/) {
+			int rand = Random.Range (0, 15);
 			if (rand == 0) {
 				int randMove = Random.Range (-1, 1);
 
@@ -84,11 +85,13 @@ public class KeeseMovement : MonoBehaviour {
 	
 	IEnumerator MoveInGrid(float x,float y,float z)
 	{
+		stuckTimer = 0f;
 		x = Mathf.Round (x * 100f) / 100f;
 		y = Mathf.Round (y * 100f) / 100f;
 		z = Mathf.Round (z * 100f) / 100f;
-		while (transform.position.x != x || transform.position.y != y || transform.position.z != z)
+		while ((transform.position.x != x || transform.position.y != y) && stuckTimer < .5f)
 		{
+			stuckTimer += Time.deltaTime;
 			//moving x forward
 			if (transform.position.x < x)
 			{
@@ -167,7 +170,7 @@ public class KeeseMovement : MonoBehaviour {
 			{
 				targetPosition.z = 0;
 			}
-			
+			//transform.position = Vector3.Lerp(transform.position, transform.position + targetPosition, 1);
 			transform.Translate(targetPosition);
 			yield return 0;
 		}

@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour {
 	public bool canmove = true;
 	public bool dead = false;
 	public float attackTimer = 1.5f;
+	public float stuckTimer = 0f;
 	LinkMovement2 targetScript;
 	public Rigidbody projectile;
 	public Rigidbody heart;
@@ -63,7 +64,7 @@ public class EnemyMovement : MonoBehaviour {
 		//dir = Random.Range (0, 20);
 
 		float distance = Vector3.Distance (transform.position, linkObject.transform.position);
-		if (distance <= 15f) {
+		if (distance <= 15f/*renderer.isVisible*/) {
 			//Attacking
 			if (dir == 0 && targetScript.position.x == transform.position.x && attackTimer == 0) {
 				Rigidbody newProjectile = (Rigidbody)Instantiate (projectile, transform.position + Vector3.down * gridSize, transform.rotation);
@@ -106,7 +107,7 @@ public class EnemyMovement : MonoBehaviour {
 		if (randMove == 3)
 			dir = 3;
 
-		if (distance <= 15f) {
+		if (distance <= 15f && attackTimer <=.75f/*renderer.isVisible*/) {
 
 			if (dir == 2 && canmove == true) {//up
 				canmove = false;
@@ -129,11 +130,13 @@ public class EnemyMovement : MonoBehaviour {
 
 IEnumerator MoveInGrid(float x,float y,float z)
 {
+	stuckTimer = 0f;
 	x = Mathf.Round (x * 100f) / 100f;
 	y = Mathf.Round (y * 100f) / 100f;
 	z = Mathf.Round (z * 100f) / 100f;
-	while (transform.position.x != x || transform.position.y != y || transform.position.z != z)
+	while ((transform.position.x != x || transform.position.y != y) && stuckTimer < .5f)
 	{
+		stuckTimer += Time.deltaTime;
 		//moving x forward
 		if (transform.position.x < x)
 		{
