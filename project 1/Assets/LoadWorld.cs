@@ -13,16 +13,20 @@ public class LoadWorld : MonoBehaviour {
 	public static GameObject defaultenemy;
 
 	public TextAsset overworldXML;
+	public int world_width = 16;
+	public int world_height = 8;
+	public int startx = 7;
+	public int starty = 7;
 
 	// Use this for initialization
 	void Start () {
-		overworldXML = (TextAsset) Resources.Load ("overworld");
 		XmlSerializer serializer = new XmlSerializer (typeof(World));
 		TextReader reader = new StringReader (overworldXML.text);
 		overworld = serializer.Deserialize (reader) as World;
 		reader.Close ();
 		initializeprefabdict ();
-		overworld.loadRoom (7, 7);
+		overworld.Initialize (world_width, world_height);
+		overworld.loadRoom (startx, starty);
 	}
 	
 	public void initializeprefabdict() {
@@ -112,12 +116,20 @@ public class World {
 	[XmlArrayItem("Room")]
 	public List<Room> Rooms = new List<Room> ();
 
+	int world_width;
+	int world_height;
+
+	public void Initialize (int x, int y) {
+		world_width = x;
+		world_height = y;
+	}
+
 	public void loadRoom(int x, int y) {
-		Rooms[x * 8 + y].Initialize();
+		Rooms[x * world_width + y].Initialize();
 	}
 
 	public void destroyRoom(int x, int y) {
-			Rooms [x * 8 + y].Destroy ();
+			Rooms [x * world_width + y].Destroy ();
 	}
 }
 
