@@ -11161,11 +11161,11 @@
 			</Tiles>
 		</Room>
 		<Room x="7" y="6">
-			<Enemies>
-				<Enemy x="5" y="5" value="Octorok"/>
-				<Enemy x="7" y="7" value="Octorok"/>
-				<Enemy x="3" y="3" value="Octorok"/>
-			</Enemies>
+			<Items>
+				<Item x="5" y="5" value="Octorok"/>
+				<Item x="7" y="7" value="Octorok"/>
+				<Item x="3" y="3" value="Octorok"/>
+			</Items>
 			<Tiles>
 				<Tile x="0" y="0" value="43" block="X" />
 				<Tile x="1" y="0" value="43" block="X" />
