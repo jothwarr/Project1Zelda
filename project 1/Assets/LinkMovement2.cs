@@ -8,6 +8,7 @@ public class LinkMovement2 : MonoBehaviour
 	public Vector3 targetPosition;//temporary value for moving (used in coroutines)
 	public Vector3 position;
 	public float health;
+	public bool ignoreInput;
 	public float stopTimer;
 	public float stuckTimer;
 	Vector3 swordPosition;
@@ -37,11 +38,76 @@ public class LinkMovement2 : MonoBehaviour
 		speed = 7;
 		health = 3f;
 	}
+
+	void OnCollisionExit(Collision col)
+	{
+		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item")
+			ignoreInput = false;
+		StartCoroutine (MoveInGrid (Mathf.Round (position.x), Mathf.Round (position.y), position.z));
+	}
+			
+	void OnCollisionStay(Collision col)
+	{
+		ignoreInput = true;
+		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item") {
+			if (dir == 0) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x, transform.position.y + gridSize, transform.position.z));
+			}
+			if (dir == 1) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x + gridSize, transform.position.y, transform.position.z));
+			}
+			if (dir == 2) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x, transform.position.y - gridSize, transform.position.z));
+			}
+			if (dir == 3) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x - gridSize, transform.position.y, transform.position.z));
+			}
+
+		}
+	}
+
 	void OnCollisionEnter(Collision col)
 	{
 		//this.rigidbody.velocity = Vector3.zero;
 		//this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
+		ignoreInput = true;
 		/*Vector3 fixedpos;
 		fixedpos.x = Mathf.Round(transform.position.x);
 		fixedpos.y = Mathf.Round(transform.position.y);
@@ -52,18 +118,54 @@ public class LinkMovement2 : MonoBehaviour
 		hitTimer = .3f;
 
 		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item") {
-			//if (dir == 0) {
-				StopAllCoroutines();
+			if (dir == 0) {
+				StopAllCoroutines ();
 				canmove = false;
-				stopTimer = 1f;
-				while(stopTimer >= 0f){
-					StopAllCoroutines();
-					stopTimer -= Time.deltaTime * .001f;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
 				}
-				if(stopTimer <= 0f)
+				if (stopTimer <= 0f)
 					canmove = true;
-				//StartCoroutine (MoveInGrid (transform.position.x, transform.position.y + .01f, transform.position.z));
-			//}
+				StartCoroutine (MoveInGrid (transform.position.x, transform.position.y + gridSize, transform.position.z));
+			}
+			if (dir == 1) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x + gridSize, transform.position.y, transform.position.z));
+			}
+			if (dir == 2) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x, transform.position.y - gridSize, transform.position.z));
+			}
+			if (dir == 3) {
+				StopAllCoroutines ();
+				canmove = false;
+				stopTimer = 2f;
+				while (stopTimer >= 0f) {
+					StopAllCoroutines ();
+					stopTimer -= Time.deltaTime;
+				}
+				if (stopTimer <= 0f)
+					canmove = true;
+				StartCoroutine (MoveInGrid (transform.position.x - gridSize, transform.position.y, transform.position.z));
+			}
 		}
 
 
@@ -186,7 +288,7 @@ public class LinkMovement2 : MonoBehaviour
 		//canmove = canmove && !PauseMovement.isTimeStopped ();
 		if (hit == false) {
 			if ((Input.GetKey (KeyCode.UpArrow) == true || Input.GetKey (KeyCode.W) == true) 
-				&& canmove == true && attacking == false) {
+				&& canmove == true && attacking == false && ignoreInput == false) {
 				animator.SetInteger ("Direction", 2);
 				swordPosition.x = .4f;
 				swordPosition.y = .5f;
@@ -198,7 +300,7 @@ public class LinkMovement2 : MonoBehaviour
 				StartCoroutine (MoveInGrid ((float)transform.position.x, (float)transform.position.y + gridSize, (float)transform.position.z));
 			}
 			if ((Input.GetKey (KeyCode.RightArrow) == true || Input.GetKey (KeyCode.D) == true) 
-				&& canmove == true && attacking == false) {
+			    && canmove == true && attacking == false && ignoreInput == false) {
 				animator.SetInteger ("Direction", 3);
 				swordPosition.x = 1.3f;
 				swordPosition.y = -.53f;
@@ -210,7 +312,7 @@ public class LinkMovement2 : MonoBehaviour
 				StartCoroutine (MoveInGrid ((float)transform.position.x + gridSize, (float)transform.position.y, (float)transform.position.z));
 			}
 			if ((Input.GetKey (KeyCode.LeftArrow) == true || Input.GetKey (KeyCode.A) == true) 
-				&& canmove == true && attacking == false) {
+			    && canmove == true && attacking == false && ignoreInput == false) {
 				animator.SetInteger ("Direction", 1);
 				swordPosition.x = -.45f;
 				swordPosition.y = -.53f;
@@ -222,7 +324,7 @@ public class LinkMovement2 : MonoBehaviour
 				StartCoroutine (MoveInGrid ((float)transform.position.x - gridSize, (float)transform.position.y, (float)transform.position.z));
 			}
 			if ((Input.GetKey (KeyCode.DownArrow) == true || Input.GetKey (KeyCode.S) == true) 
-				&& canmove == true && attacking == false) {
+			    && canmove == true && attacking == false && ignoreInput == false) {
 				animator.SetInteger ("Direction", 0);
 				swordPosition.x = .53f;
 				swordPosition.y = -1.3f;
@@ -361,8 +463,8 @@ public class LinkMovement2 : MonoBehaviour
 				//targetPosition = Vector3.zero;
 			}
 			else*/
-				transform.position = Vector3.Lerp(transform.position, transform.position + targetPosition, 1);
-				//transform.Translate(targetPosition);
+				//transform.position = Vector3.Lerp(transform.position, transform.position + targetPosition, 1);
+				transform.Translate(targetPosition);
 			//if(stuckTimer >= .2f)
 			//	transform.position = hitPos;
 
