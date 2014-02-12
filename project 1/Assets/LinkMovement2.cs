@@ -42,11 +42,12 @@ public class LinkMovement2 : MonoBehaviour
 		//this.rigidbody.velocity = Vector3.zero;
 		//this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
-		Vector3 fixedpos;
+		/*Vector3 fixedpos;
 		fixedpos.x = Mathf.Round(transform.position.x);
 		fixedpos.y = Mathf.Round(transform.position.y);
 		fixedpos.z = Mathf.Round(transform.position.z);
 		this.transform.position = fixedpos;
+		*/
 		float angle = Vector3.Angle(col.contacts [0].normal, Vector3.right);
 		hitTimer = .3f;
 
@@ -57,7 +58,7 @@ public class LinkMovement2 : MonoBehaviour
 				stopTimer = 1f;
 				while(stopTimer >= 0f){
 					StopAllCoroutines();
-					stopTimer -= Time.deltaTime * .00001f;
+					stopTimer -= Time.deltaTime * .001f;
 				}
 				if(stopTimer <= 0f)
 					canmove = true;
