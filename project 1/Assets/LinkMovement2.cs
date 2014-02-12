@@ -28,6 +28,11 @@ public class LinkMovement2 : MonoBehaviour
 	public float projSpeed = 7f;
 	public Rect deadRect;
 
+	void OnGUI() {
+		string text = "Health: " + health;
+		GUI.Box (new Rect(0, 0, 100, 30), text);
+	}
+
 	void Start()
 	{
 		animator = this.gameObject.GetComponent<Animator>();
