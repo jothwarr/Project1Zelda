@@ -126,11 +126,11 @@ public class World {
 	}
 
 	public void loadRoom(int x, int y) {
-		Rooms[x * world_width + y].Initialize();
+		Rooms[x * world_height + y].Initialize();
 	}
 
 	public void destroyRoom(int x, int y) {
-			Rooms [x * world_width + y].Destroy ();
+			Rooms [x * world_height + y].Destroy ();
 	}
 }
 
