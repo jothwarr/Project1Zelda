@@ -8,6 +8,7 @@ public class LinkMovement2 : MonoBehaviour
 	public Vector3 targetPosition;//temporary value for moving (used in coroutines)
 	public Vector3 position;
 	public float health;
+	public float stopTimer;
 	public float stuckTimer;
 	Vector3 swordPosition;
 	Vector3 swordSize;
@@ -32,57 +33,97 @@ public class LinkMovement2 : MonoBehaviour
 		animator = this.gameObject.GetComponent<Animator>();
 		swordBox = this.gameObject.GetComponent<BoxCollider>();
 		projSpeed = 7f;
-		gridSize = 1;
-		speed = 5;
+		gridSize = .5f;
+		speed = 7;
 		health = 3f;
 	}
 	void OnCollisionEnter(Collision col)
 	{
-		this.rigidbody.velocity = Vector3.zero;
-		this.rigidbody.angularVelocity = Vector3.zero;
+		//this.rigidbody.velocity = Vector3.zero;
+		//this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
 		Vector3 fixedpos;
 		fixedpos.x = Mathf.Round(transform.position.x);
 		fixedpos.y = Mathf.Round(transform.position.y);
 		fixedpos.z = Mathf.Round(transform.position.z);
 		this.transform.position = fixedpos;
-		hit = true;
-		hitTimer = .3f;
-		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile")
-			health -= .5f;
-
 		float angle = Vector3.Angle(col.contacts [0].normal, Vector3.right);
-		if (angle >= 135f || angle <= -135f) {
-			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+		hitTimer = .3f;
+
+		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item") {
+			//if (dir == 0) {
+				StopAllCoroutines();
+				canmove = false;
+				stopTimer = 1f;
+				while(stopTimer >= 0f){
+					StopAllCoroutines();
+					stopTimer -= Time.deltaTime * .00001f;
+				}
+				if(stopTimer <= 0f)
+					canmove = true;
+				//StartCoroutine (MoveInGrid (transform.position.x, transform.position.y + .01f, transform.position.z));
+			//}
+		}
+
+
+		if (col.gameObject.tag == "Enemy") {
+			health -= .5f;
+			hit = true;
+		}
+		//if dir = angle blah dont get hit by projectiles
+		
+		if (angle >= 135f || angle <= -135f) {//hit to the left
+			if (col.gameObject.tag == "Enemy") {
 				canmove = false;
 				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x - gridSize), Mathf.Round(transform.position.y), transform.position.z));
 			}
+			if(col.gameObject.tag == "Projectile" && (dir != 3 || attacking == true)) {
+				health -= .5f;
+				hit = true;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x - gridSize), Mathf.Round(transform.position.y), transform.position.z));
+			}
+
 		}
-		else if (angle <= 45f && angle >= -45f) {
-			if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+		else if (angle <= 45f && angle >= -45f) {//hit to the right
+			if (col.gameObject.tag == "Enemy") {
+				canmove = false;
+				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x + gridSize), Mathf.Round(transform.position.y), transform.position.z));
+			}
+			if(col.gameObject.tag == "Projectile" && (dir != 1 || attacking == true)){
+				health -= .5f;
 				canmove = false;
 				StartCoroutine (MoveInGrid (Mathf.Round (transform.position.x + gridSize), Mathf.Round(transform.position.y), transform.position.z));
 			}
 		}
 		else {
 			angle = Vector3.Angle (col.contacts [0].normal, Vector3.up);
-			if (angle <= 45f && angle >= -45f) {
-				if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+			if (angle <= 45f && angle >= -45f) {//hit up
+				if (col.gameObject.tag == "Enemy") {
+					canmove = false;
+					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y + gridSize), transform.position.z));
+				}
+				if(col.gameObject.tag == "Projectile" && (dir != 0 || attacking == true)){
+					health -= .5f;
 					canmove = false;
 					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y + gridSize), transform.position.z));
 				}
 			}
-			else /*if (angle <= 45f && angle >= -45f)*/ {
-				if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Projectile") {
+			else /*if (angle <= 45f && angle >= -45f)*/ {//hit down
+				if (col.gameObject.tag == "Enemy") {
+					canmove = false;
+					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y - gridSize), transform.position.z));
+				}
+				if(col.gameObject.tag == "Projectile" && (dir != 2 || attacking == true)){
+					health -= .5f;
 					canmove = false;
 					StartCoroutine (MoveInGrid (Mathf.Round(transform.position.x), Mathf.Round(transform.position.y - gridSize), transform.position.z));
 				}
 			}
 		}
-		fixedpos.x = Mathf.Round(transform.position.x);
-		fixedpos.y = Mathf.Round(transform.position.y);
-		fixedpos.z = Mathf.Round(transform.position.z);
-		this.transform.position = fixedpos;
+		//fixedpos.x = Mathf.Round(transform.position.x);
+		//fixedpos.y = Mathf.Round(transform.position.y);
+		//fixedpos.z = Mathf.Round(transform.position.z);
+		//this.transform.position = fixedpos;
 		if (col.gameObject.tag == "Projectile")
 			Destroy (col.gameObject);
 	}
@@ -226,9 +267,9 @@ public class LinkMovement2 : MonoBehaviour
 	public IEnumerator MoveInGrid(float x,float y,float z)
 	{
 		stuckTimer = 0f;
-		x = Mathf.Round(x);
-		y = Mathf.Round(y);
-		z = Mathf.Round(z);
+		//x = Mathf.Round(x);
+		//y = Mathf.Round(y);
+		//z = Mathf.Round(z);
 		while ((transform.position.x != x || transform.position.y != y) && stuckTimer <= .5f /*|| transform.position.z != z*/)
 		{
 			stuckTimer += Time.deltaTime;

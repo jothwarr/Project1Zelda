@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyMovement : MonoBehaviour {
 
 	public Vector3 targetPosition = Vector3.zero;
-	public int speed = 4;
+	public int speed = 2;
 	public int dir = 3;
 	public float gridSize=16f;
 	public bool canmove = true;
@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour {
 	void Start () {
 		linkObject = GameObject.Find("Link");
 		targetScript = linkObject.GetComponent<LinkMovement2>();
-		gridSize = 1;
+		gridSize = .5f;
 		speed = 2;
 		projSpeed = 5f;
 	}
@@ -131,9 +131,9 @@ public class EnemyMovement : MonoBehaviour {
 IEnumerator MoveInGrid(float x,float y,float z)
 {
 	stuckTimer = 0f;
-	x = Mathf.Round (x * 100f) / 100f;
-	y = Mathf.Round (y * 100f) / 100f;
-	z = Mathf.Round (z * 100f) / 100f;
+	//x = Mathf.Round (x * 100f) / 100f;
+	//y = Mathf.Round (y * 100f) / 100f;
+	//z = Mathf.Round (z * 100f) / 100f;
 	while ((transform.position.x != x || transform.position.y != y) && stuckTimer < .5f)
 	{
 		stuckTimer += Time.deltaTime;
