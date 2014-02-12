@@ -539,6 +539,10 @@
 				<Tile x="14" y="10" value="02" block="." />
 				<Tile x="15" y="10" value="1b" block="X" />
 			</Tiles>
+			<Items>
+				<Item x="10" y="2" value="Octorok" />
+				<Item x="12" y="2" value="Octorok" />
+			</Items>
 		</Room>
 		<Room x="0" y="3">
 			<Tiles>
@@ -899,6 +903,10 @@
 				<Tile x="14" y="10" value="1b" block="X" />
 				<Tile x="15" y="10" value="1b" block="X" />
 			</Tiles>
+			<Items>
+				<Item x="8" y="2" value="Octorok" />
+				<Item x="7" y="3" value="Octorok" />
+			</Items>
 		</Room>
 		<Room x="1" y="1">
 			<Tiles>
@@ -2162,6 +2170,11 @@
 				<Tile x="14" y="10" value="1b" block="X" />
 				<Tile x="15" y="10" value="1b" block="X" />
 			</Tiles>
+			<Items>
+				<Item x="3" y="2" value="Octorok" />
+				<Item x="4" y="2" value="Keese" />
+				<Item x="5" y="3" value="Keese" />
+			</Items>
 		</Room>
 		<Room x="3" y="0">
 			<Tiles>
