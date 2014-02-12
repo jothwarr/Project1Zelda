@@ -1979,6 +1979,9 @@
 				<Tile x="14" y="10" value="1b" block="X" />
 				<Tile x="15" y="10" value="1b" block="X" />
 			</Tiles>
+			<Items>
+				<Item x="5" y="4" value="Triforce" />
+			</Items>
 		</Room>
 		<Room x="2" y="3">
 			<Tiles>
