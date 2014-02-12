@@ -6,9 +6,15 @@ public class HeartScript : MonoBehaviour {
 	LinkMovement2 linkScript;
 	GameObject linkObject;
 
+	void OnCollisionExit(Collision col)
+	{
+		linkScript.ignoreInput = false;
+	}
+
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.name == "Link") {
+			linkScript.ignoreInput = false;
 			Destroy (this.gameObject);
 			linkScript.health += 1f;
 			if (linkScript.health >= 3f)
@@ -19,6 +25,7 @@ public class HeartScript : MonoBehaviour {
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag != "Sword") {
+			linkScript.ignoreInput = false;
 			Destroy (this.gameObject);
 			linkScript.health += 1f;
 			if (linkScript.health >= 3f)

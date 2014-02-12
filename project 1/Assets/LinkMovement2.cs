@@ -9,6 +9,7 @@ public class LinkMovement2 : MonoBehaviour
 	public Vector3 position;
 	public float health;
 	public bool ignoreInput;
+	public float ignoreCount;
 	public float stopTimer;
 	public float stuckTimer;
 	Vector3 swordPosition;
@@ -46,7 +47,7 @@ public class LinkMovement2 : MonoBehaviour
 
 	void OnCollisionExit(Collision col)
 	{
-		if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item")
+		//if (col.gameObject.tag != "Enemy" && col.gameObject.tag != "Projectile" && col.gameObject.tag != "Item")
 			ignoreInput = false;
 		StartCoroutine (MoveInGrid (Mathf.Round (position.x), Mathf.Round (position.y), position.z));
 	}
@@ -237,6 +238,13 @@ public class LinkMovement2 : MonoBehaviour
 	}
 	void Update()
 	{
+
+		if (ignoreInput == true)
+			ignoreCount ++;
+		if (ignoreCount >= 8) {
+			ignoreInput = false;
+			ignoreCount = 0;
+		}
 		position = this.transform.position;
 		dir = animator.GetInteger("Direction");
 		//this.rigidbody.velocity = Vector3.zero;
