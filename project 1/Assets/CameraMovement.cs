@@ -9,10 +9,10 @@ public class CameraMovement : MonoBehaviour {
 	Vector3 move = new Vector3 (0f, 0f, 0f);
 	//float linkX;
 	//float linkY;
-	int roomx = 7;
-	int roomy = 7;
-	int oldroomx = 7;
-	int oldroomy = 7;
+	public int roomx = 7;
+	public int roomy = 7;
+	int oldroomx;
+	int oldroomy;
 	const float roomWidth = 16f;
 	const float roomHeight = 11f;
 	const float speed = roomWidth;
@@ -27,6 +27,8 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		oldroomx = roomx;
+		oldroomy = roomy;
 		link = GameObject.Find ("Link").transform;
 		//linkInstance = GameObject.Find ("Link").GetComponent<LinkMovement2> ();
 		room = new Rect (roomx * roomWidth, roomy * roomHeight * -1 + 1, roomWidth, roomHeight);
