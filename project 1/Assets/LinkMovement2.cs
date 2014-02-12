@@ -90,8 +90,8 @@ public class LinkMovement2 : MonoBehaviour
 	{
 		position = this.transform.position;
 		dir = animator.GetInteger("Direction");
-		this.rigidbody.velocity = Vector3.zero;
-		this.rigidbody.angularVelocity = Vector3.zero;
+		//this.rigidbody.velocity = Vector3.zero;
+		//this.rigidbody.angularVelocity = Vector3.zero;
 		this.rigidbody.freezeRotation = true;
 		swordBox.enabled = false;
 
